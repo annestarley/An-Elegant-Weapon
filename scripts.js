@@ -125,7 +125,105 @@ document.addEventListener('DOMContentLoaded', function () {
       var q2 = document.querySelector('#q2')
       //Loading third question
       q2.addEventListener('click', function() {
-        
+        question2.parentNode.removeChild(question2)
+        var question3 = document.createElement('div')
+        question3.setAttribute('class', 'question')
+        backdrop.appendChild(question3)
+
+        var header3 = document.createElement('h3')
+        header3.innerText = 'Click on all Star Wars Movies you enjoyed.'
+        question3.appendChild(header3)
+
+        var div3 = document.createElement('div')
+        div3.setAttribute('class', 'movies-container')
+        question3.appendChild(div3)
+
+        var imgs2 = []
+        var h4s2 = []
+        var divs2 = []
+        for (var i = 0; i < 10; i++) {
+          var div = document.createElement('div')
+          var img = document.createElement('img')
+          var h4 = document.createElement('h4')
+          divs2.push(div)
+          imgs2.push(img)
+          h4s2.push(h4)
+        }
+        divs2[0].setAttribute('id', '1')
+        imgs2[0].setAttribute('src', 'images/episode1.png')
+        imgs2[0].setAttribute('alt', 'episode 1')
+        h4s2[0].innerText = 'Episode 1'
+        divs2[0].appendChild(imgs2[0])
+        divs2[0].appendChild(h4s2[0])
+        div3.appendChild(divs2[0])
+        divs2[1].setAttribute('id', '2')
+        imgs2[1].setAttribute('src', 'images/episode2.jpg')
+        imgs2[1].setAttribute('alt', 'episode 2')
+        h4s2[1].innerText = 'Episode 2'
+        divs2[1].appendChild(imgs2[1])
+        divs2[1].appendChild(h4s2[1])
+        div3.appendChild(divs2[1])
+        divs2[2].setAttribute('id', 'clone')
+        imgs2[2].setAttribute('src', 'images/clonewars.jpg')
+        imgs2[2].setAttribute('alt', 'clone wars')
+        h4s2[2].innerText = 'Clone Wars'
+        divs2[2].appendChild(imgs2[2])
+        divs2[2].appendChild(h4s2[2])
+        div3.appendChild(divs2[2])
+        divs2[3].setAttribute('id', '3')
+        imgs2[3].setAttribute('src', 'images/episode3.jpg')
+        imgs2[3].setAttribute('alt', 'episode 3')
+        h4s2[3].innerText = 'Episode 3'
+        divs2[3].appendChild(imgs2[3])
+        divs2[3].appendChild(h4s2[3])
+        div3.appendChild(divs2[3])
+        divs2[4].setAttribute('id', 'rogue')
+        imgs2[4].setAttribute('src', 'images/rogueone.png')
+        imgs2[4].setAttribute('alt', 'Rogue One')
+        h4s2[4].innerText = 'Rogue One'
+        divs2[4].appendChild(imgs2[4])
+        divs2[4].appendChild(h4s2[4])
+        div3.appendChild(divs2[4])
+        divs2[5].setAttribute('id', '4')
+        imgs2[5].setAttribute('src', 'images/episode4.jpg')
+        imgs2[5].setAttribute('alt', 'episode 4')
+        h4s2[5].innerText = 'Episode 4'
+        divs2[5].appendChild(imgs2[5])
+        divs2[5].appendChild(h4s2[5])
+        div3.appendChild(divs2[5])
+        divs2[6].setAttribute('id', '5')
+        imgs2[6].setAttribute('src', 'images/episode5.jpg')
+        imgs2[6].setAttribute('alt', 'episode 5')
+        h4s2[6].innerText = 'Episode 5'
+        divs2[6].appendChild(imgs2[6])
+        divs2[6].appendChild(h4s2[6])
+        div3.appendChild(divs2[6])
+        divs2[7].setAttribute('id', '6')
+        imgs2[7].setAttribute('src', 'images/episode6.jpg')
+        imgs2[7].setAttribute('alt', 'episode 6')
+        h4s2[7].innerText = 'Episode 6'
+        divs2[7].appendChild(imgs2[7])
+        divs2[7].appendChild(h4s2[7])
+        div3.appendChild(divs2[7])
+        divs2[8].setAttribute('id', '7')
+        imgs2[8].setAttribute('src', 'images/episode8.jpg')
+        imgs2[8].setAttribute('alt', 'episode 7')
+        h4s2[8].innerText = 'Episode 7'
+        divs2[8].appendChild(imgs2[8])
+        divs2[8].appendChild(h4s2[8])
+        div3.appendChild(divs2[8])
+        divs2[9].setAttribute('id', '8')
+        imgs2[9].setAttribute('src', 'images/episode8.jpg')
+        imgs2[9].setAttribute('alt', 'episode 8')
+        h4s2[9].innerText = 'Episode 8'
+        divs2[9].appendChild(imgs2[9])
+        divs2[9].appendChild(h4s2[9])
+        div3.appendChild(divs2[9])
+
+        var button3 = document.createElement('button')
+        button3.innerText = 'Submit'
+        button3.setAttribute('id', 'q3')
+        question3.appendChild(button3)
       })
 
     })
