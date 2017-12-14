@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var question = document.querySelector('.question')
   var q0 = document.querySelector('#q0')
-  var q1 = document.querySelector('#q1')
+  var backdrop = document.querySelector('.backdrop')
 
 // Loading first question
   q0.addEventListener('click', function() {
@@ -71,10 +71,63 @@ document.addEventListener('DOMContentLoaded', function () {
     button.setAttribute('id', 'q1')
     button.innerText = 'Submit'
     question.appendChild(button)
-  })
+    var q1 = document.querySelector('#q1')
 
-  // Loading second question
-  q1.addEventListener('click', function() {
 
+
+    // Loading second question
+    q1.addEventListener('click', function() {
+      question.parentNode.removeChild(question)
+      var question2 = document.createElement('div')
+      question2.setAttribute('class', 'question')
+      backdrop.appendChild(question2)
+
+      var jarjar = document.createElement('img')
+      jarjar.setAttribute('src', 'images/jarjar.jpg')
+      jarjar.setAttribute('alt', 'Jar Jar Binks')
+      question2.appendChild(jarjar)
+
+      var ul = document.createElement('ul')
+      question2.appendChild(ul)
+      var lis = []
+      var inputs = []
+      var labels = []
+      for (var i = 0; i < 3; i++) {
+        var li = document.createElement('li')
+        lis.push(li)
+        var input = document.createElement('input')
+        input.setAttribute('type', 'radio')
+        input.setAttribute('name', 'jarjar')
+        inputs.push(input)
+        var label = document.createElement('label')
+        labels.push(label)
+      }
+      labels[0].innerText = 'Sure'
+      lis[0].appendChild(inputs[0])
+      lis[0].appendChild(labels[0])
+      ul.appendChild(lis[0])
+      labels[1].innerText = 'Meh'
+      lis[1].appendChild(inputs[1])
+      lis[1].appendChild(labels[1])
+      ul.appendChild(lis[1])
+      labels[2].innerText = 'Half-witted Nerf Herder!'
+      lis[2].appendChild(inputs[2])
+      lis[2].appendChild(labels[2])
+      ul.appendChild(lis[2])
+
+      var button2 = document.createElement('button')
+      button2.setAttribute('id', 'q2')
+      button2.innerText = 'Submit'
+      question2.appendChild(button2)
+
+
+
+      var q2 = document.querySelector('#q2')
+      //Loading third question
+      q2.addEventListener('click', function() {
+        
+      })
+
+    })
   })
 })
