@@ -224,6 +224,55 @@ document.addEventListener('DOMContentLoaded', function () {
         button3.innerText = 'Submit'
         button3.setAttribute('id', 'q3')
         question3.appendChild(button3)
+
+
+
+        var q3 = document.querySelector('#q3')
+        //Loading fourth question
+        q3.addEventListener('click', function() {
+          question3.parentNode.removeChild(question3)
+          var question4 = document.createElement('div')
+          question4.setAttribute('class', 'question')
+          backdrop.appendChild(question4)
+
+          var header4 = document.createElement('h3')
+          header4.innerText = 'The dark side is really cool?'
+          question4.appendChild(header4)
+
+
+          var ul4 = document.createElement('ul')
+          question4.appendChild(ul4)
+          var lis4 = []
+          var inputs4 = []
+          var labels4 = []
+          for (var i = 0; i < 3; i++) {
+            var li4 = document.createElement('li')
+            lis4.push(li4)
+            var input4 = document.createElement('input')
+            input4.setAttribute('type', 'radio')
+            input4.setAttribute('name', 'darkside')
+            inputs4.push(input4)
+            var label4 = document.createElement('label')
+            labels4.push(label4)
+          }
+          labels4[0].innerText = 'Yah! A pathway to many abilities some consider... unnatural'
+          lis4[0].appendChild(inputs4[0])
+          lis4[0].appendChild(labels4[0])
+          ul4.appendChild(lis4[0])
+          labels4[1].innerText = 'I respect it... but..'
+          lis4[1].appendChild(inputs4[1])
+          lis4[1].appendChild(labels4[1])
+          ul4.appendChild(lis4[1])
+          labels4[2].innerText = 'Hard pass'
+          lis4[2].appendChild(inputs4[2])
+          lis4[2].appendChild(labels4[2])
+          ul4.appendChild(lis4[2])
+
+          var button4 = document.createElement('button')
+          button4.setAttribute('id', 'q4')
+          button4.innerText = 'Submit'
+          question4.appendChild(button4)
+        })
       })
 
     })
