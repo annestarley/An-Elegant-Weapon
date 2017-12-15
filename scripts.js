@@ -27,7 +27,8 @@ document.addEventListener('DOMContentLoaded', function () {
       imgs.push(img)
       h4s.push(h4)
     }
-    divs[0].setAttribute('id', 'senator')
+    imgs[0].setAttribute('id', 'senator')
+    imgs[0].setAttribute('id', 'job')
     divs[0].setAttribute('class', 'vocation')
     imgs[0].setAttribute('src', 'images/senator.jpg')
     imgs[0].setAttribute('alt', 'galactic senator')
@@ -35,7 +36,8 @@ document.addEventListener('DOMContentLoaded', function () {
     container.appendChild(divs[0])
     divs[0].appendChild(imgs[0])
     divs[0].appendChild(h4s[0])
-    divs[1].setAttribute('id', 'bountyhunter')
+    imgs[1].setAttribute('id', 'bountyhunter')
+    imgs[1].setAttribute('id', 'job')
     divs[1].setAttribute('class', 'vocation')
     imgs[1].setAttribute('src', 'images/bountyhunter.jpg')
     imgs[1].setAttribute('alt', 'bounty hunter')
@@ -43,7 +45,8 @@ document.addEventListener('DOMContentLoaded', function () {
     container.appendChild(divs[1])
     divs[1].appendChild(imgs[1])
     divs[1].appendChild(h4s[1])
-    divs[2].setAttribute('id', 'musician')
+    imgs[2].setAttribute('id', 'musician')
+    imgs[2].setAttribute('id', 'job')
     divs[2].setAttribute('class', 'vocation')
     imgs[2].setAttribute('src', 'images/musician.jpg')
     imgs[2].setAttribute('alt', 'musician')
@@ -51,7 +54,8 @@ document.addEventListener('DOMContentLoaded', function () {
     container.appendChild(divs[2])
     divs[2].appendChild(imgs[2])
     divs[2].appendChild(h4s[2])
-    divs[3].setAttribute('id', 'beauty')
+    imgs[3].setAttribute('id', 'beauty')
+    imgs[3].setAttribute('id', 'job')
     divs[3].setAttribute('class', 'vocation')
     imgs[3].setAttribute('src', 'images/beauty.png')
     imgs[3].setAttribute('alt', 'beauty contestant')
@@ -59,7 +63,8 @@ document.addEventListener('DOMContentLoaded', function () {
     container.appendChild(divs[3])
     divs[3].appendChild(imgs[3])
     divs[3].appendChild(h4s[3])
-    divs[4].setAttribute('id', 'pilot')
+    imgs[4].setAttribute('id', 'pilot')
+    imgs[4].setAttribute('id', 'job')
     divs[4].setAttribute('class', 'vocation')
     imgs[4].setAttribute('src', 'images/pilot.jpeg')
     imgs[4].setAttribute('alt', 'pilot')
@@ -74,6 +79,23 @@ document.addEventListener('DOMContentLoaded', function () {
     question.appendChild(button)
     var q1 = document.querySelector('#q1')
 
+
+
+    // The code that allows for a target picture to be selected
+    var jobs = document.querySelectorAll('#job')
+    for (var i = 0; i < jobs.length; i++) {
+      jobs[i].addEventListener('click', function(e) {
+        var eClasses = e.target.classList
+        if (eClasses.contains('selected')) {
+          e.target.classList.remove('selected')
+        } else {
+          for (var i = 0; i < jobs.length; i++) {
+            jobs[i].classList.remove('selected')
+          }
+          e.target.classList.add('selected')
+        }
+      })
+    }
 
 
     // Loading second question
