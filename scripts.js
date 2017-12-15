@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', function () {
         backdrop.appendChild(question3)
 
         var header3 = document.createElement('h3')
-        header3.innerText = 'Click on all Star Wars Movies you enjoyed.'
+        header3.innerText = 'Click on ALL Star Wars Movies you enjoyed.'
         question3.appendChild(header3)
 
         var div3 = document.createElement('div')
@@ -259,7 +259,6 @@ document.addEventListener('DOMContentLoaded', function () {
             } else {
               e.target.classList.add('selected')
             }
-            console.log(eClasses)
           })
         }
 
@@ -329,7 +328,6 @@ document.addEventListener('DOMContentLoaded', function () {
             var container5 = document.createElement('div')
             container5.setAttribute('class', 'vacation-container')
             question5.appendChild(container5)
-            console.log(question5)
 
             var divs5 = []
             var imgs5 = []
@@ -342,7 +340,8 @@ document.addEventListener('DOMContentLoaded', function () {
               imgs5.push(img5)
               h4s5.push(h45)
             }
-            divs5[0].setAttribute('id', 'felucia')
+            imgs5[0].setAttribute('id', 'felucia')
+            imgs5[0].setAttribute('id', 'vacation-spot')
             divs5[0].setAttribute('class', 'vacation')
             imgs5[0].setAttribute('src', 'images/felucia.jpeg')
             imgs5[0].setAttribute('alt', 'felucia')
@@ -350,7 +349,8 @@ document.addEventListener('DOMContentLoaded', function () {
             container5.appendChild(divs5[0])
             divs5[0].appendChild(imgs5[0])
             divs5[0].appendChild(h4s5[0])
-            divs5[1].setAttribute('id', 'naboo')
+            imgs5[1].setAttribute('id', 'naboo')
+            imgs5[1].setAttribute('id', 'vacation-spot')
             divs5[1].setAttribute('class', 'vacation')
             imgs5[1].setAttribute('src', 'images/naboo.jpeg')
             imgs5[1].setAttribute('alt', 'naboo')
@@ -358,15 +358,17 @@ document.addEventListener('DOMContentLoaded', function () {
             container5.appendChild(divs5[1])
             divs5[1].appendChild(imgs5[1])
             divs5[1].appendChild(h4s5[1])
-            divs5[2].setAttribute('id', 'Hoth')
+            imgs5[2].setAttribute('id', 'alderaan')
+            imgs5[2].setAttribute('id', 'vacation-spot')
             divs5[2].setAttribute('class', 'vacation')
-            imgs5[2].setAttribute('src', 'images/hoth.jpg')
-            imgs5[2].setAttribute('alt', 'hoth')
-            h4s5[2].innerText = 'Hoth'
+            imgs5[2].setAttribute('src', 'images/alderaan.jpg')
+            imgs5[2].setAttribute('alt', 'alderaan')
+            h4s5[2].innerText = 'Alderann (pre-blow-up)'
             container5.appendChild(divs5[2])
             divs5[2].appendChild(imgs5[2])
             divs5[2].appendChild(h4s5[2])
-            divs5[3].setAttribute('id', 'Endor')
+            imgs5[3].setAttribute('id', 'endor')
+            imgs5[3].setAttribute('id', 'vacation-spot')
             divs5[3].setAttribute('class', 'vacation')
             imgs5[3].setAttribute('src', 'images/endor.jpg')
             imgs5[3].setAttribute('alt', 'endor')
@@ -374,11 +376,12 @@ document.addEventListener('DOMContentLoaded', function () {
             container5.appendChild(divs5[3])
             divs5[3].appendChild(imgs5[3])
             divs5[3].appendChild(h4s5[3])
-            divs5[4].setAttribute('id', 'mustafar')
+            imgs5[4].setAttribute('id', 'coruscant')
+            imgs5[4].setAttribute('id', 'vacation-spot')
             divs5[4].setAttribute('class', 'vacation')
-            imgs5[4].setAttribute('src', 'images/mustafar.jpeg')
-            imgs5[4].setAttribute('alt', 'mustafar')
-            h4s5[4].innerText = 'Mustafar'
+            imgs5[4].setAttribute('src', 'images/coruscant.jpeg')
+            imgs5[4].setAttribute('alt', 'coruscant')
+            h4s5[4].innerText = 'Coruscant (also, pre-blow-up)'
             container5.appendChild(divs5[4])
             divs5[4].appendChild(imgs5[4])
             divs5[4].appendChild(h4s5[4])
@@ -387,6 +390,24 @@ document.addEventListener('DOMContentLoaded', function () {
             button5.setAttribute('id', 'q5')
             button5.innerText = 'Submit'
             question5.appendChild(button5)
+
+
+
+            // Adding the code that allows for selection of a vacation spot
+            var vacationSpots = document.querySelectorAll('#vacation-spot')
+            for (var i = 0; i < vacationSpots.length; i++) {
+              vacationSpots[i].addEventListener('click', function(e) {
+                var eClasses = e.target.classList
+                if (eClasses.contains('selected')) {
+                  e.target.classList.remove('selected')
+                } else {
+                  for (var i = 0; i < vacationSpots.length; i++) {
+                    vacationSpots[i].classList.remove('selected')
+                  }
+                  e.target.classList.add('selected')
+                }
+              })
+            }
 
 
 

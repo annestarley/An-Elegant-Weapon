@@ -131,7 +131,7 @@ img {
   font-size: 1.2em;
 }
 
-.movies-container .selected:hover, .vocation-container .selected:hover {
+.movies-container .selected:hover, .vocation-container .selected:hover, .vacation-container .selected:hover {
   height: 165px;
   border: 4px solid gold;
 }
