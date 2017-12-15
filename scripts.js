@@ -206,7 +206,7 @@ document.addEventListener('DOMContentLoaded', function () {
         divs2[7].appendChild(h4s2[7])
         div3.appendChild(divs2[7])
         divs2[8].setAttribute('id', '7')
-        imgs2[8].setAttribute('src', 'images/episode8.jpg')
+        imgs2[8].setAttribute('src', 'images/episode7.jpg')
         imgs2[8].setAttribute('alt', 'episode 7')
         h4s2[8].innerText = 'Episode 7'
         divs2[8].appendChild(imgs2[8])

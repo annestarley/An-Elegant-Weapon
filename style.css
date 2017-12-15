@@ -43,9 +43,16 @@ button {
 button:hover {
   background: black;
   color: white;
+  padding: 16px;
 }
 
-button:focus { outline: 0; }
+button:focus {
+  outline: 0;
+  background: gold;
+  border: none;
+  padding: 16px;
+}
+
 
 
 h1, h3, h4, label, button {
@@ -75,6 +82,7 @@ li {
 
 li:hover {
   color: gold;
+  font-size: 1.2em;
 }
 
 input[type='radio']:after {
@@ -114,6 +122,8 @@ img {
 
 .vocation-container img:hover, .movies-container img:hover, .vacation-container img:hover, #r2d2:hover, #bb8:hover {
   border: none;
+  height: 160px;
+  font-size: 1.2em;
 }
 
 .vocation-container, .movies-container, .vacation-container, .droid-container {
