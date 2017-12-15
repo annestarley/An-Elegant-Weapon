@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var question = document.querySelector('.question')
   var q0 = document.querySelector('#q0')
   var backdrop = document.querySelector('.backdrop')
+  var answers = ['','','','','']
 
 // Loading first question
   q0.addEventListener('click', function() {
@@ -149,70 +150,70 @@ document.addEventListener('DOMContentLoaded', function () {
           imgs2.push(img)
           h4s2.push(h4)
         }
-        divs2[0].setAttribute('id', '1')
+        imgs2[0].setAttribute('id', 'movies')
         imgs2[0].setAttribute('src', 'images/episode1.png')
         imgs2[0].setAttribute('alt', 'episode 1')
         h4s2[0].innerText = 'Episode 1'
         divs2[0].appendChild(imgs2[0])
         divs2[0].appendChild(h4s2[0])
         div3.appendChild(divs2[0])
-        divs2[1].setAttribute('id', '2')
+        imgs2[1].setAttribute('id', 'movies')
         imgs2[1].setAttribute('src', 'images/episode2.jpg')
         imgs2[1].setAttribute('alt', 'episode 2')
         h4s2[1].innerText = 'Episode 2'
         divs2[1].appendChild(imgs2[1])
         divs2[1].appendChild(h4s2[1])
         div3.appendChild(divs2[1])
-        divs2[2].setAttribute('id', 'clone')
+        imgs2[2].setAttribute('id', 'movies')
         imgs2[2].setAttribute('src', 'images/clonewars.jpg')
         imgs2[2].setAttribute('alt', 'clone wars')
         h4s2[2].innerText = 'Clone Wars'
         divs2[2].appendChild(imgs2[2])
         divs2[2].appendChild(h4s2[2])
         div3.appendChild(divs2[2])
-        divs2[3].setAttribute('id', '3')
+        imgs2[3].setAttribute('id', 'movies')
         imgs2[3].setAttribute('src', 'images/episode3.jpg')
         imgs2[3].setAttribute('alt', 'episode 3')
         h4s2[3].innerText = 'Episode 3'
         divs2[3].appendChild(imgs2[3])
         divs2[3].appendChild(h4s2[3])
         div3.appendChild(divs2[3])
-        divs2[4].setAttribute('id', 'rogue')
+        imgs2[4].setAttribute('id', 'movies')
         imgs2[4].setAttribute('src', 'images/rogueone.png')
         imgs2[4].setAttribute('alt', 'Rogue One')
         h4s2[4].innerText = 'Rogue One'
         divs2[4].appendChild(imgs2[4])
         divs2[4].appendChild(h4s2[4])
         div3.appendChild(divs2[4])
-        divs2[5].setAttribute('id', '4')
+        imgs2[5].setAttribute('id', 'movies')
         imgs2[5].setAttribute('src', 'images/episode4.jpg')
         imgs2[5].setAttribute('alt', 'episode 4')
         h4s2[5].innerText = 'Episode 4'
         divs2[5].appendChild(imgs2[5])
         divs2[5].appendChild(h4s2[5])
         div3.appendChild(divs2[5])
-        divs2[6].setAttribute('id', '5')
+        imgs2[6].setAttribute('id', 'movies')
         imgs2[6].setAttribute('src', 'images/episode5.jpg')
         imgs2[6].setAttribute('alt', 'episode 5')
         h4s2[6].innerText = 'Episode 5'
         divs2[6].appendChild(imgs2[6])
         divs2[6].appendChild(h4s2[6])
         div3.appendChild(divs2[6])
-        divs2[7].setAttribute('id', '6')
+        imgs2[7].setAttribute('id', 'movies')
         imgs2[7].setAttribute('src', 'images/episode6.jpg')
         imgs2[7].setAttribute('alt', 'episode 6')
         h4s2[7].innerText = 'Episode 6'
         divs2[7].appendChild(imgs2[7])
         divs2[7].appendChild(h4s2[7])
         div3.appendChild(divs2[7])
-        divs2[8].setAttribute('id', '7')
+        imgs2[8].setAttribute('id', 'movies')
         imgs2[8].setAttribute('src', 'images/episode7.jpg')
         imgs2[8].setAttribute('alt', 'episode 7')
         h4s2[8].innerText = 'Episode 7'
         divs2[8].appendChild(imgs2[8])
         divs2[8].appendChild(h4s2[8])
         div3.appendChild(divs2[8])
-        divs2[9].setAttribute('id', '8')
+        imgs2[9].setAttribute('id', 'movies')
         imgs2[9].setAttribute('src', 'images/episode8.jpg')
         imgs2[9].setAttribute('alt', 'episode 8')
         h4s2[9].innerText = 'Episode 8'
@@ -224,6 +225,22 @@ document.addEventListener('DOMContentLoaded', function () {
         button3.innerText = 'Submit'
         button3.setAttribute('id', 'q3')
         question3.appendChild(button3)
+
+
+        //Adding the code to allow users to select movies they enjoy
+        var moviesList = document.querySelectorAll('#movies')
+        for (var i = 0; i < moviesList.length; i++) {
+          moviesList[i].addEventListener('click', function(e) {
+            var eClasses = e.target.classList
+            if (eClasses.contains('selected')) {
+              e.target.classList.remove('selected')
+            } else {
+              e.target.classList.add('selected')
+            }
+            console.log(eClasses)
+          })
+        }
+
 
 
 
