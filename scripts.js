@@ -439,6 +439,7 @@ document.addEventListener('DOMContentLoaded', function () {
               r2d2.setAttribute('src', 'images/r2d2.jpg')
               r2d2.setAttribute('alt', 'r2d2')
               r2d2.setAttribute('id', 'r2d2')
+              r2d2.setAttribute('id', 'droid-type')
               droid[0].appendChild(r2d2)
               var r2d2name = document.createElement('h4')
               r2d2name.innerText = "R2D2"
@@ -455,6 +456,7 @@ document.addEventListener('DOMContentLoaded', function () {
               bb8.setAttribute('src', 'images/bb8.jpg')
               bb8.setAttribute('alt', 'BB8')
               bb8.setAttribute('id', 'bb8')
+              bb8.setAttribute('id', 'droid-type')
               droid[2].appendChild(bb8)
               var bb8name = document.createElement('h4')
               bb8name.innerText = 'BB8'
@@ -465,11 +467,32 @@ document.addEventListener('DOMContentLoaded', function () {
               button6.setAttribute('id', 'q6')
               button6.innerText = "Let's see your results!"
               question6.appendChild(button6)
+
+
+
+              // Code that allows user to select a droid
+              var droids = document.querySelectorAll('#droid-type')
+              for (var i = 0; i < droids.length; i++) {
+                droids[i].addEventListener('click', function(e) {
+                  var eClasses = e.target.classList
+                  if (eClasses.contains('selected')) {
+                    e.target.classList.remove('selected')
+                  } else {
+                    for (var i = 0; i < droids.length; i++) {
+                      droids[i].classList.remove('selected')
+                    }
+                    e.target.classList.add('selected')
+                  }
+                })
+              }
+
+
+
+              // Laoding answer page
             })
-        })
+          })
         })
       })
-
     })
   })
 })
