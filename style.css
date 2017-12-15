@@ -112,11 +112,11 @@ img {
   margin: 8px;
 }
 
-.vocation-container img:hover, .movies-container img:hover {
+.vocation-container img:hover, .movies-container img:hover, .vacation-container img:hover {
   border: none;
 }
 
-.vocation-container, .movies-container {
+.vocation-container, .movies-container, .vacation-container {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -124,6 +124,6 @@ img {
   width: 100%;
 }
 
-.vocation {
+.vocation, .vacation {
   display: inline-block;
 }

@@ -272,6 +272,82 @@ document.addEventListener('DOMContentLoaded', function () {
           button4.setAttribute('id', 'q4')
           button4.innerText = 'Submit'
           question4.appendChild(button4)
+
+
+
+          var q4 = document.querySelector('#q4')
+          //Loading fifth question
+          q4.addEventListener('click', function() {
+            question4.parentNode.removeChild(question4)
+            var question5 = document.createElement('div')
+            question5.setAttribute('class', 'question')
+            backdrop.appendChild(question5)
+
+            var header4 = document.createElement('h4')
+            header4.innerText = 'Choose a galactic vacation spot:'
+            question5.appendChild(header4)
+
+            var container5 = document.createElement('div')
+            container5.setAttribute('class', 'vacation-container')
+            question5.appendChild(container5)
+            console.log(question5)
+
+            var divs5 = []
+            var imgs5 = []
+            var h4s5 = []
+            for (var i = 0; i < 5; i++) {
+              var div5 = document.createElement('div')
+              var img5 = document.createElement('img')
+              var h45 = document.createElement('h4')
+              divs5.push(div5)
+              imgs5.push(img5)
+              h4s5.push(h45)
+            }
+            divs5[0].setAttribute('id', 'felucia')
+            divs5[0].setAttribute('class', 'vacation')
+            imgs5[0].setAttribute('src', 'images/felucia.jpeg')
+            imgs5[0].setAttribute('alt', 'felucia')
+            h4s5[0].innerText = 'Felucia'
+            container5.appendChild(divs5[0])
+            divs5[0].appendChild(imgs5[0])
+            divs5[0].appendChild(h4s5[0])
+            divs5[1].setAttribute('id', 'naboo')
+            divs5[1].setAttribute('class', 'vacation')
+            imgs5[1].setAttribute('src', 'images/naboo.jpeg')
+            imgs5[1].setAttribute('alt', 'naboo')
+            h4s5[1].innerText = 'Naboo'
+            container5.appendChild(divs5[1])
+            divs5[1].appendChild(imgs5[1])
+            divs5[1].appendChild(h4s5[1])
+            divs5[2].setAttribute('id', 'Hoth')
+            divs5[2].setAttribute('class', 'vacation')
+            imgs5[2].setAttribute('src', 'images/hoth.jpg')
+            imgs5[2].setAttribute('alt', 'hoth')
+            h4s5[2].innerText = 'Hoth'
+            container5.appendChild(divs5[2])
+            divs5[2].appendChild(imgs5[2])
+            divs5[2].appendChild(h4s5[2])
+            divs5[3].setAttribute('id', 'Endor')
+            divs5[3].setAttribute('class', 'vacation')
+            imgs5[3].setAttribute('src', 'images/endor.jpg')
+            imgs5[3].setAttribute('alt', 'endor')
+            h4s5[3].innerText = 'Endor'
+            container5.appendChild(divs5[3])
+            divs5[3].appendChild(imgs5[3])
+            divs5[3].appendChild(h4s5[3])
+            divs5[4].setAttribute('id', 'mustafar')
+            divs5[4].setAttribute('class', 'vacation')
+            imgs5[4].setAttribute('src', 'images/mustafar.jpeg')
+            imgs5[4].setAttribute('alt', 'mustafar')
+            h4s5[4].innerText = 'Mustafar'
+            container5.appendChild(divs5[4])
+            divs5[4].appendChild(imgs5[4])
+            divs5[4].appendChild(h4s5[4])
+
+            var button5 = document.createElement('button')
+            button5.innerText = 'Submit'
+            question5.appendChild(button5)
+        })
         })
       })
 
