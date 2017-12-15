@@ -118,6 +118,7 @@ document.addEventListener('DOMContentLoaded', function () {
       question2.appendChild(jarjar)
 
       var ul = document.createElement('ul')
+      ul.setAttribute('id', 'jarjarbinks')
       question2.appendChild(ul)
       var lis = []
       var inputs = []
@@ -133,17 +134,32 @@ document.addEventListener('DOMContentLoaded', function () {
         labels.push(label)
       }
       labels[0].innerText = 'Sure'
+      inputs[0].setAttribute('id', 'sure')
       lis[0].appendChild(inputs[0])
       lis[0].appendChild(labels[0])
       ul.appendChild(lis[0])
       labels[1].innerText = 'Meh'
+      inputs[1].setAttribute('id', 'meh')
       lis[1].appendChild(inputs[1])
       lis[1].appendChild(labels[1])
       ul.appendChild(lis[1])
       labels[2].innerText = 'Half-witted Nerf Herder!'
+      inputs[2].setAttribute('id', 'no')
       lis[2].appendChild(inputs[2])
       lis[2].appendChild(labels[2])
       ul.appendChild(lis[2])
+
+
+      // Adding answers array algorithm for q2
+      ul.addEventListener('click', function(e) {
+        if (document.getElementById('sure').checked) {
+          answers[1] = 'sure'
+        } else if (document.getElementById('meh').checked) {
+          answers[1] = 'meh'
+        } else if (document.getElementById('no').checked) {
+          answers[1] = 'no'
+        }
+      })
 
       var button2 = document.createElement('button')
       button2.setAttribute('id', 'q2')
@@ -307,22 +323,40 @@ document.addEventListener('DOMContentLoaded', function () {
             labels4.push(label4)
           }
           labels4[0].innerText = 'Yah! A pathway to many abilities some consider... unnatural'
+          inputs4[0].setAttribute('id', 'ya')
           lis4[0].appendChild(inputs4[0])
           lis4[0].appendChild(labels4[0])
           ul4.appendChild(lis4[0])
           labels4[1].innerText = 'I respect it... but..'
+          inputs4[1].setAttribute('id', 'respect')
           lis4[1].appendChild(inputs4[1])
           lis4[1].appendChild(labels4[1])
           ul4.appendChild(lis4[1])
           labels4[2].innerText = 'Hard pass'
+          inputs4[2].setAttribute('id', 'pass')
           lis4[2].appendChild(inputs4[2])
           lis4[2].appendChild(labels4[2])
           ul4.appendChild(lis4[2])
+          console.log(ul4)
+
+
+
+          // Adding answers array algorithm for q2
+          ul4.addEventListener('click', function(e) {
+            if (document.getElementById('ya').checked) {
+              answers[2] = 'yah'
+            } else if (document.getElementById('respect').checked) {
+              answers[2] = 'respect'
+            } else if (document.getElementById('pass').checked) {
+              answers[2] = 'pass'
+            }
+          })
 
           var button4 = document.createElement('button')
           button4.setAttribute('id', 'q4')
           button4.innerText = 'Submit'
           question4.appendChild(button4)
+
 
 
 
@@ -531,10 +565,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     answers[0] = jobs[i].alt
                   }
                 }
-                // q2
-                
-                // q4
-
+                // q2 - up in q2 section
+                // q4 - up in q4 section
                 // q5
                 for (var i = 0; i < vacationSpots.length; i++) {
                   if (jobs[i].classList.contains('selected')) {
