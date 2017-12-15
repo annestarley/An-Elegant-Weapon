@@ -440,11 +440,15 @@ document.addEventListener('DOMContentLoaded', function () {
               r2d2.setAttribute('alt', 'r2d2')
               r2d2.setAttribute('id', 'r2d2')
               droid[0].appendChild(r2d2)
+              var r2d2name = document.createElement('h4')
+              r2d2name.innerText = "R2D2"
+              droid[0].appendChild(r2d2name)
               droidcontainer.appendChild(droid[0])
 
               var or = document.createElement('h4')
               or.innerText = 'or'
               droid[1].appendChild(or)
+              droid[1].setAttribute('style', 'margin-top: 40px; margin-bottom: 40px; font-style: italic;')
               droidcontainer.appendChild(droid[1])
 
               var bb8 = document.createElement('img')
@@ -452,6 +456,9 @@ document.addEventListener('DOMContentLoaded', function () {
               bb8.setAttribute('alt', 'BB8')
               bb8.setAttribute('id', 'bb8')
               droid[2].appendChild(bb8)
+              var bb8name = document.createElement('h4')
+              bb8name.innerText = 'BB8'
+              droid[2].appendChild(bb8name)
               droidcontainer.appendChild(droid[2])
 
               var button6 = document.createElement('button')
