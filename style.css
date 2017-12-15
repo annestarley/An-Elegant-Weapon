@@ -112,18 +112,28 @@ img {
   margin: 8px;
 }
 
-.vocation-container img:hover, .movies-container img:hover, .vacation-container img:hover {
+.vocation-container img:hover, .movies-container img:hover, .vacation-container img:hover, #r2d2:hover, #bb8:hover {
   border: none;
 }
 
-.vocation-container, .movies-container, .vacation-container {
+.vocation-container, .movies-container, .vacation-container, .droid-container {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   width: 100%;
+  margin-bottom: 10px;
 }
 
 .vocation, .vacation {
   display: inline-block;
 }
+
+.droid {
+  display: block;
+  flex: 100%;
+}
+
+/*#r2d2, #bb8 {
+  display: block;
+}*/

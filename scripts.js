@@ -345,8 +345,60 @@ document.addEventListener('DOMContentLoaded', function () {
             divs5[4].appendChild(h4s5[4])
 
             var button5 = document.createElement('button')
+            button5.setAttribute('id', 'q5')
             button5.innerText = 'Submit'
             question5.appendChild(button5)
+
+
+
+            var q5 = document.querySelector('#q5')
+            //Loading sixth question
+            q5.addEventListener('click', function() {
+              question5.parentNode.removeChild(question5)
+              var question6 = document.createElement('div')
+              question6.setAttribute('class', 'question')
+              backdrop.appendChild(question6)
+
+              var header6 = document.createElement('h3')
+              header6.innerText = 'Choose your droid pal:'
+              question6.appendChild(header6)
+
+              var droidcontainer = document.createElement('div')
+              droidcontainer.setAttribute('class', 'droid-container')
+              question6.appendChild(droidcontainer)
+
+
+              var droid = []
+              for (var i = 0; i < 3; i++) {
+                var div = document.createElement('div')
+                div.setAttribute('class', 'droid')
+                droid.push(div)
+              }
+
+              var r2d2 = document.createElement('img')
+              r2d2.setAttribute('src', 'images/r2d2.jpg')
+              r2d2.setAttribute('alt', 'r2d2')
+              r2d2.setAttribute('id', 'r2d2')
+              droid[0].appendChild(r2d2)
+              droidcontainer.appendChild(droid[0])
+
+              var or = document.createElement('h4')
+              or.innerText = 'or'
+              droid[1].appendChild(or)
+              droidcontainer.appendChild(droid[1])
+
+              var bb8 = document.createElement('img')
+              bb8.setAttribute('src', 'images/bb8.jpg')
+              bb8.setAttribute('alt', 'BB8')
+              bb8.setAttribute('id', 'bb8')
+              droid[2].appendChild(bb8)
+              droidcontainer.appendChild(droid[2])
+
+              var button6 = document.createElement('button')
+              button6.setAttribute('id', 'q6')
+              button6.innerText = "Let's see your results!"
+              question6.appendChild(button6)
+            })
         })
         })
       })
