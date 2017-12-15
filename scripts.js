@@ -4,10 +4,14 @@ document.addEventListener('DOMContentLoaded', function () {
   var q0 = document.querySelector('#q0')
   var backdrop = document.querySelector('.backdrop')
   var answers = ['','','','','']
+  var boxes = document.querySelectorAll('#box')
 
 // Loading first question
   q0.addEventListener('click', function() {
     q0.parentNode.removeChild(q0)
+
+    boxes[0].setAttribute('class', '')
+    boxes[1].setAttribute('class', 'current')
 
     var header1 = document.createElement('h3')
     header1.innerText = 'Choose a non-force related vocation:'
@@ -31,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
     imgs[0].setAttribute('id', 'job')
     divs[0].setAttribute('class', 'vocation')
     imgs[0].setAttribute('src', 'images/senator.jpg')
-    imgs[0].setAttribute('alt', 'galactic senator')
+    imgs[0].setAttribute('alt', 'senator')
     h4s[0].innerText = 'Galactic Senator'
     container.appendChild(divs[0])
     divs[0].appendChild(imgs[0])
@@ -40,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
     imgs[1].setAttribute('id', 'job')
     divs[1].setAttribute('class', 'vocation')
     imgs[1].setAttribute('src', 'images/bountyhunter.jpg')
-    imgs[1].setAttribute('alt', 'bounty hunter')
+    imgs[1].setAttribute('alt', 'bounty-hunter')
     h4s[1].innerText = 'Bounty Hunter'
     container.appendChild(divs[1])
     divs[1].appendChild(imgs[1])
@@ -58,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
     imgs[3].setAttribute('id', 'job')
     divs[3].setAttribute('class', 'vocation')
     imgs[3].setAttribute('src', 'images/beauty.png')
-    imgs[3].setAttribute('alt', 'beauty contestant')
+    imgs[3].setAttribute('alt', 'beauty-contestant')
     h4s[3].innerText = 'Beauty Contestant'
     container.appendChild(divs[3])
     divs[3].appendChild(imgs[3])
@@ -104,6 +108,9 @@ document.addEventListener('DOMContentLoaded', function () {
       var question2 = document.createElement('div')
       question2.setAttribute('class', 'question')
       backdrop.appendChild(question2)
+
+      boxes[1].setAttribute('class', '')
+      boxes[2].setAttribute('class', 'current')
 
       var jarjar = document.createElement('img')
       jarjar.setAttribute('src', 'images/jarjar.jpg')
@@ -152,6 +159,9 @@ document.addEventListener('DOMContentLoaded', function () {
         var question3 = document.createElement('div')
         question3.setAttribute('class', 'question')
         backdrop.appendChild(question3)
+
+        boxes[2].setAttribute('class', '')
+        boxes[3].setAttribute('class', 'current')
 
         var header3 = document.createElement('h3')
         header3.innerText = 'Click on ALL Star Wars Movies you enjoyed.'
@@ -273,6 +283,9 @@ document.addEventListener('DOMContentLoaded', function () {
           question4.setAttribute('class', 'question')
           backdrop.appendChild(question4)
 
+          boxes[3].setAttribute('class', '')
+          boxes[4].setAttribute('class', 'current')
+
           var header4 = document.createElement('h3')
           header4.innerText = 'The dark side is really cool?'
           question4.appendChild(header4)
@@ -320,6 +333,9 @@ document.addEventListener('DOMContentLoaded', function () {
             var question5 = document.createElement('div')
             question5.setAttribute('class', 'question')
             backdrop.appendChild(question5)
+
+            boxes[4].setAttribute('class', '')
+            boxes[5].setAttribute('class', 'current')
 
             var header4 = document.createElement('h4')
             header4.innerText = 'Choose a galactic vacation spot:'
@@ -419,6 +435,9 @@ document.addEventListener('DOMContentLoaded', function () {
               question6.setAttribute('class', 'question')
               backdrop.appendChild(question6)
 
+              boxes[5].setAttribute('class', '')
+              boxes[6].setAttribute('class', 'current')
+
               var header6 = document.createElement('h3')
               header6.innerText = 'Choose your droid pal:'
               question6.appendChild(header6)
@@ -437,7 +456,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
               var r2d2 = document.createElement('img')
               r2d2.setAttribute('src', 'images/r2d2.jpg')
-              r2d2.setAttribute('alt', 'r2d2')
+              r2d2.setAttribute('alt', 'R2D2')
               r2d2.setAttribute('id', 'r2d2')
               r2d2.setAttribute('id', 'droid-type')
               droid[0].appendChild(r2d2)
@@ -488,7 +507,53 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+              var q6 = document.querySelector('#q6')
               // Laoding answer page
+              q6.addEventListener('click', function() {
+                question6.parentNode.removeChild(question6)
+                var answer = document.createElement('div')
+                answer.setAttribute('class', 'question')
+                backdrop.appendChild(answer)
+
+                boxes[6].setAttribute('class', '')
+                boxes[7].setAttribute('class', 'current')
+
+                var header7 = document.createElement('h3')
+                header7.innerText = 'And your lightsaber is...'
+                answer.appendChild(header7)
+
+
+
+                // filling out answers algorithm
+                //q1
+                for (var i = 0; i < jobs.length; i++) {
+                  if (jobs[i].classList.contains('selected')) {
+                    answers[0] = jobs[i].alt
+                  }
+                }
+                // q2
+                
+                // q4
+
+                // q5
+                for (var i = 0; i < vacationSpots.length; i++) {
+                  if (jobs[i].classList.contains('selected')) {
+                    answers[3] = vacationSpots[i].alt
+                  }
+                }
+                // q6
+                for (var i = 0; i < droids.length; i++) {
+                  if (droids[i].classList.contains('selected')) {
+                    answers[4] = droids[i].alt
+                  }
+                }
+                console.log(answers)
+
+
+
+                //algorithm for figuring out which lightsaber
+
+              })
             })
           })
         })

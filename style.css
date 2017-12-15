@@ -10,7 +10,7 @@ html {
 
 .head {
   margin-top: 20%;
-  margin-bottom: 100px;
+  margin-bottom: 20px;
 }
 
 .backdrop {
@@ -29,6 +29,30 @@ p {
   width: 70%;
   /*background-color: #494e6b*/
   margin-bottom: 300px
+}
+
+.question-box {
+  margin-bottom: 100px;
+}
+
+.question-box li {
+  display: inline-block;
+  margin: 5px;
+  border: none;
+  background: black;
+  color: white;
+  border-radius: 25%;
+  padding: 15px;
+}
+
+.question-box li:hover {
+  color: white;
+  font-size: 1em;
+}
+
+li.current {
+  background: gold;
+  padding: 20px;
 }
 
 button {
