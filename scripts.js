@@ -592,10 +592,18 @@ document.addEventListener('DOMContentLoaded', function () {
                     count++
                   }
                 }
-                console.log(count)
+
+                var ansHeader = document.createElement('h2')
+                var ansImg = document.createElement('img')
+                ansHeader.setAttribute('style', 'margin-top: 60px')
+                var ansParagraph = document.createElement('h4')
 
                 if (answers[0] === '' && answers[1] === '' && answers[2] === '' && answers[3] === '' && answers[4] === '') {
                   alert('blaster')
+                  ansHeader.innerText = 'Blaster'
+                  ansImg.setAttribute('src', 'images/blaster.png')
+                  ansImg.setAttribute('alt', 'blaster')
+                  ansParagraph.innerText = "Looks like your not a force wielder... a blaster is the weapon for you!"
                 } else if (count > 2) {
                   alert('darksaber')
                 } else if (answers[0] === 'senator') {
@@ -650,7 +658,9 @@ document.addEventListener('DOMContentLoaded', function () {
                   alert('purple single-blade')
                 }
 
-
+                answer.appendChild(ansHeader)
+                answer.appendChild(ansImg)
+                answer.appendChild(ansParagraph)
 
 
 
