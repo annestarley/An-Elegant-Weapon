@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var question = document.querySelector('.question')
   var q0 = document.querySelector('#q0')
   var backdrop = document.querySelector('.backdrop')
-  var answers = ['','','','','']
+  var answers = ["", "", "", "", ""]
   var boxes = document.querySelectorAll('#box')
 
 // Loading first question
@@ -337,7 +337,6 @@ document.addEventListener('DOMContentLoaded', function () {
           lis4[2].appendChild(inputs4[2])
           lis4[2].appendChild(labels4[2])
           ul4.appendChild(lis4[2])
-          console.log(ul4)
 
 
 
@@ -584,6 +583,40 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
                 //algorithm for figuring out which lightsaber
+                var lightsaber;
+                var count = 0;
+                if (answers[0] === '' && answers[1] === '' && answers[2] === '' && answers[3] === '' && answers[4] === '') {
+                  alert('blaster')
+                }
+                for (var i = 0; i < answers.length; i++) {
+                  if (answers[i] === "") {
+                    count++
+                  }
+                }
+                if (count > 2) {
+                  alert('darksaber')
+                }
+                if (answers[0] === 'senator') {
+                  if (answers[3] === 'coruscant' || 'alderaan') {
+                    alert('green double-blade')
+                  } else {
+                    alert('green single-blade')
+                  }
+                } else if (answers[0] === 'pilot') {
+                  if (answers[3] === 'endor' || 'felucia') {
+                    alert('blue double-blade')
+                  } else {
+                    alert('blue single-blade')
+                  }
+                } else if (answers[0] === 'bounty hunter') {
+                  if (answers[3] === 'naboo' || 'felucia') {
+                    alert('red double-bladed')
+                  } else if (answers[3] === 'endor') {
+                    alert('red cross-gaurd')
+                  } else {
+                    alert('red single-blade')
+                  }
+                }
 
               })
             })
