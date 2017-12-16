@@ -600,15 +600,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 if (answers[0] === '' && answers[1] === '' && answers[2] === '' && answers[3] === '' && answers[4] === '') {
                   alert('blaster')
-                  ansHeader.innerText = 'Blaster'
+                  ansHeader.innerText = 'BLASTER'
                   ansImg.setAttribute('src', 'images/blaster.png')
                   ansImg.setAttribute('alt', 'blaster')
                   ansParagraph.innerText = "Looks like your not a force wielder... a blaster is the weapon for you!"
                 } else if (count > 2) {
                   alert('darksaber')
+                  ansHeader.innerText = 'DARKSABER'
+                  ansImg.setAttribute('src', 'images/darksaber.jpg')
+                  ansImg.setAttribute('alt', 'darksaber')
+                  ansParagraph.innerText = "The darksaber is an ancient and unique lightsaber design with only one previously created. It has since been stolen from the Jedi temple."
                 } else if (answers[0] === 'senator') {
                   if (answers[3] === ('coruscant' || 'alderaan')) {
                     alert('green double-blade')
+                    ansHeader.innerText = 'GREEN DOUBLE-BLADED LIGHTSABER'
+                    ansImg.setAttribute('src', 'images/greendouble.jpg')
+                    ansImg.setAttribute('alt', 'green double-bladed lightsaber')
+                    ansImg.setAttribute('style', 'height: 300px;')
+                    ansParagraph.innerText = "A single hilt with a beam emmiter at both ends, the double-bladed sword was first invented by the Sith empire but the design has since been used by the Jedi."
                   } else {
                     alert('green single-blade')
                   }
