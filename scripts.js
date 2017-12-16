@@ -192,6 +192,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var divs2 = []
         for (var i = 0; i < 10; i++) {
           var div = document.createElement('div')
+          div.setAttribute('class', 'movie-div')
           var img = document.createElement('img')
           var h4 = document.createElement('h4')
           divs2.push(div)
@@ -568,7 +569,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 // q4 - up in q4 section
                 // q5
                 for (var i = 0; i < vacationSpots.length; i++) {
-                  if (jobs[i].classList.contains('selected')) {
+                  if (vacationSpots[i].classList.contains('selected')) {
                     answers[3] = vacationSpots[i].alt
                   }
                 }
@@ -585,38 +586,81 @@ document.addEventListener('DOMContentLoaded', function () {
                 //algorithm for figuring out which lightsaber
                 var lightsaber;
                 var count = 0;
-                if (answers[0] === '' && answers[1] === '' && answers[2] === '' && answers[3] === '' && answers[4] === '') {
-                  alert('blaster')
-                }
+
                 for (var i = 0; i < answers.length; i++) {
                   if (answers[i] === "") {
                     count++
                   }
                 }
-                if (count > 2) {
+                console.log(count)
+
+                if (answers[0] === '' && answers[1] === '' && answers[2] === '' && answers[3] === '' && answers[4] === '') {
+                  alert('blaster')
+                } else if (count > 2) {
                   alert('darksaber')
-                }
-                if (answers[0] === 'senator') {
-                  if (answers[3] === 'coruscant' || 'alderaan') {
+                } else if (answers[0] === 'senator') {
+                  if (answers[3] === ('coruscant' || 'alderaan')) {
                     alert('green double-blade')
                   } else {
                     alert('green single-blade')
                   }
                 } else if (answers[0] === 'pilot') {
-                  if (answers[3] === 'endor' || 'felucia') {
+                  if (answers[3] === ('endor' || 'felucia')) {
                     alert('blue double-blade')
                   } else {
                     alert('blue single-blade')
                   }
-                } else if (answers[0] === 'bounty hunter') {
-                  if (answers[3] === 'naboo' || 'felucia') {
+                } else if (answers[0] === 'bounty-hunter') {
+                  if (answers[3] === ('naboo' || 'felucia')) {
                     alert('red double-bladed')
                   } else if (answers[3] === 'endor') {
                     alert('red cross-gaurd')
                   } else {
                     alert('red single-blade')
                   }
+                } else if (answers[0] === 'musician' && answers[2] === 'yah') {
+                  alert('purple single-bladed')
+                } else if (answers[0] === 'musician' && answers[2] === ('respect' || '')) {
+                  if (answers[4] === ('BB8')) {
+                    alert('yellow pike-staff')
+                  } else {
+                    alert('yellow single-blade')
+                  }
+                } else if (answers[0] === 'pass') {
+                  alert('white single-blade')
+                } else if (answers[0] === 'beauty-contestant' && answers[2] === 'respect') {
+                  alert('purple single-bladed')
+                } else if (answers[0] === 'beauty-contestant' && answers[2] === 'yah') {
+                  alert('white single-bladed')
+                } else if (answers[0] === 'beauty-contestant' && answers[2] === ('meh' || '')) {
+                  if (answers[3] === ('coruscant' || 'naboo')) {
+                    alert('yellow pike-staff')
+                  } else {
+                    alert('yellow single-bladed')
+                  }
+                } else if (answers[0] === '' && answers[2] === 'yah') {
+                  alert('white single-blade')
+                } else if (answers[0] === '' && answers[2] === 'respect') {
+                  if (answers[4] === 'R2D2') {
+                    alert('yellow pike staff')
+                  } else {
+                    alert('yellow single-blade')
+                  }
+                } else if (answers[0] === '' && answers[2] === ('' || 'meh')) {
+                  alert('purple single-blade')
                 }
+
+
+
+
+
+                var playAgain = document.createElement('button')
+                playAgain.innerText = 'Click to play again!'
+                answer.appendChild(playAgain)
+
+                playAgain.addEventListener('click', function() {
+                  location.reload();
+                })
 
               })
             })

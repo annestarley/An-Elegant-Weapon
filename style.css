@@ -26,7 +26,7 @@ p {
 
 .question {
   margin: auto;
-  width: 70%;
+  width: 75%;
   /*background-color: #494e6b*/
   margin-bottom: 300px
 }
@@ -102,6 +102,8 @@ li {
   list-style-type: none;
   padding: 10px;
   margin: 10px;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 li:hover {
@@ -144,10 +146,26 @@ img {
   margin: 8px;
 }
 
+.vocation {
+  width: 175px;
+  height: 250px;
+}
+
+.movie-div {
+  width: 150px;
+  height: 250px;
+}
+
+.vacation {
+  width: 335px;
+  height: 250px;
+}
+
 .selected {
   height: 155px;
   border: 4px solid gold;
 }
+
 
 .vocation-container img:hover, .movies-container img:hover, .vacation-container img:hover, .droid-container img:hover {
   border: none;
@@ -172,6 +190,7 @@ img {
   justify-content: center;
   width: 100%;
   margin-bottom: 10px;
+  justify-content: space;
 }
 
 .vocation, .vacation {
