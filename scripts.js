@@ -678,7 +678,7 @@ document.addEventListener('DOMContentLoaded', function () {
                   }
                 } else if (answers[0] === 'pass') {
                   ansHeader.innerText = 'WHITE SINGLE-BLADED LIGHTSABER'
-                  ansImg.setAttribute('src', 'images/whitesingle.png')
+                  ansImg.setAttribute('src', 'images/whitesingle.jpg')
                   ansImg.setAttribute('alt', 'white single-bladed lightsaber')
                   ansImg.setAttribute('style', 'height: 300px;')
                   ansParagraph.innerText = ""
@@ -690,7 +690,7 @@ document.addEventListener('DOMContentLoaded', function () {
                   ansParagraph.innerText = ""
                 } else if (answers[0] === 'beauty-contestant' && answers[2] === 'yah') {
                   ansHeader.innerText = 'WHITE SINGLE-BLADED LIGHTSABER'
-                  ansImg.setAttribute('src', 'images/whitesingle.png')
+                  ansImg.setAttribute('src', 'images/whitesingle.jpg')
                   ansImg.setAttribute('alt', 'white single-bladed lightsaber')
                   ansImg.setAttribute('style', 'height: 300px;')
                   ansParagraph.innerText = ""
@@ -709,7 +709,7 @@ document.addEventListener('DOMContentLoaded', function () {
                   }
                 } else if (answers[0] === '' && answers[2] === 'yah') {
                   ansHeader.innerText = 'WHITE SINGLE-BLADED LIGHTSABER'
-                  ansImg.setAttribute('src', 'images/whitesingle.png')
+                  ansImg.setAttribute('src', 'images/whitesingle.jpg')
                   ansImg.setAttribute('alt', 'white single-bladed lightsaber')
                   ansImg.setAttribute('style', 'height: 300px;')
                   ansParagraph.innerText = ""
