@@ -599,72 +599,146 @@ document.addEventListener('DOMContentLoaded', function () {
                 var ansParagraph = document.createElement('h4')
 
                 if (answers[0] === '' && answers[1] === '' && answers[2] === '' && answers[3] === '' && answers[4] === '') {
-                  alert('blaster')
                   ansHeader.innerText = 'BLASTER'
                   ansImg.setAttribute('src', 'images/blaster.png')
                   ansImg.setAttribute('alt', 'blaster')
                   ansParagraph.innerText = "Looks like your not a force wielder... a blaster is the weapon for you!"
                 } else if (count > 2) {
-                  alert('darksaber')
                   ansHeader.innerText = 'DARKSABER'
                   ansImg.setAttribute('src', 'images/darksaber.jpg')
                   ansImg.setAttribute('alt', 'darksaber')
-                  ansParagraph.innerText = "The darksaber is an ancient and unique lightsaber design with only one previously created. It has since been stolen from the Jedi temple."
+                  ansParagraph.innerText = "An ancient and unique lightsaber design with only one previously created. It has since been stolen from the Jedi temple."
                 } else if (answers[0] === 'senator') {
                   if (answers[3] === ('coruscant' || 'alderaan')) {
-                    alert('green double-blade')
                     ansHeader.innerText = 'GREEN DOUBLE-BLADED LIGHTSABER'
                     ansImg.setAttribute('src', 'images/greendouble.jpg')
                     ansImg.setAttribute('alt', 'green double-bladed lightsaber')
                     ansImg.setAttribute('style', 'height: 300px;')
                     ansParagraph.innerText = "A single hilt with a beam emmiter at both ends, the double-bladed sword was first invented by the Sith empire but the design has since been used by the Jedi."
                   } else {
-                    alert('green single-blade')
+                    ansHeader.innerText = 'GREEN SINGLE-BLADED LIGHTSABER'
+                    ansImg.setAttribute('src', 'images/greensingle.jpg')
+                    ansImg.setAttribute('alt', 'green single-bladed lightsaber')
+                    ansImg.setAttribute('style', 'height: 300px;')
+                    ansParagraph.innerText = ""
                   }
                 } else if (answers[0] === 'pilot') {
                   if (answers[3] === ('endor' || 'felucia')) {
-                    alert('blue double-blade')
+                    ansHeader.innerText = 'BLUE DOUBLE-BLADED LIGHTSABER'
+                    ansImg.setAttribute('src', 'images/bluedouble.jpg')
+                    ansImg.setAttribute('alt', 'blue double-bladed lightsaber')
+                    ansImg.setAttribute('style', 'height: 300px;')
+                    ansParagraph.innerText = ""
                   } else {
-                    alert('blue single-blade')
+                    ansHeader.innerText = 'BLUE SINGLE-BLADED LIGHTSABER'
+                    ansImg.setAttribute('src', 'images/bluesingle.jpg')
+                    ansImg.setAttribute('alt', 'blue single-bladed lightsaber')
+                    ansImg.setAttribute('style', 'height: 300px;')
+                    ansParagraph.innerText = ""
                   }
                 } else if (answers[0] === 'bounty-hunter') {
                   if (answers[3] === ('naboo' || 'felucia')) {
-                    alert('red double-bladed')
+                    ansHeader.innerText = 'RED DOUBLE-BLADED LIGHTSABER'
+                    ansImg.setAttribute('src', 'images/reddouble.jpg')
+                    ansImg.setAttribute('alt', 'red double-bladed lightsaber')
+                    ansImg.setAttribute('style', 'height: 300px;')
+                    ansParagraph.innerText = ""
                   } else if (answers[3] === 'endor') {
-                    alert('red cross-gaurd')
+                    ansHeader.innerText = 'RED CROSS-GUARD LIGHTSABER'
+                    ansImg.setAttribute('src', 'images/redcrossgaurd.png')
+                    ansImg.setAttribute('alt', 'red cross-guard lightsaber')
+                    ansImg.setAttribute('style', 'height: 300px;')
+                    ansParagraph.innerText = ""
                   } else {
-                    alert('red single-blade')
+                    ansHeader.innerText = 'RED SINGLE-BLADED LIGHTSABER'
+                    ansImg.setAttribute('src', 'images/redsingle.png')
+                    ansImg.setAttribute('alt', 'red single-bladed lightsaber')
+                    ansImg.setAttribute('style', 'height: 300px;')
+                    ansParagraph.innerText = ""
                   }
                 } else if (answers[0] === 'musician' && answers[2] === 'yah') {
-                  alert('purple single-bladed')
+                  ansHeader.innerText = 'PURPLE SINGLE-BLADED LIGHTSABER'
+                  ansImg.setAttribute('src', 'images/purple.jpg')
+                  ansImg.setAttribute('alt', 'purple single-bladed lightsaber')
+                  ansImg.setAttribute('style', 'height: 300px;')
+                  ansParagraph.innerText = ""
                 } else if (answers[0] === 'musician' && answers[2] === ('respect' || '')) {
                   if (answers[4] === ('BB8')) {
-                    alert('yellow pike-staff')
+                    ansHeader.innerText = 'YELLOW PIKE-STAFF LIGHTSABER'
+                    ansImg.setAttribute('src', 'images/yellowdouble.png')
+                    ansImg.setAttribute('alt', 'yellow pike-staff lightsaber')
+                    ansImg.setAttribute('style', 'height: 300px;')
+                    ansParagraph.innerText = ""
                   } else {
-                    alert('yellow single-blade')
+                    ansHeader.innerText = 'YELLOW SINGLE-BLADED LIGHTSABER'
+                    ansImg.setAttribute('src', 'images/yellowsingle.jpg')
+                    ansImg.setAttribute('alt', 'yellow single-bladed lightsaber')
+                    ansImg.setAttribute('style', 'height: 300px;')
+                    ansParagraph.innerText = ""
                   }
                 } else if (answers[0] === 'pass') {
-                  alert('white single-blade')
+                  ansHeader.innerText = 'WHITE SINGLE-BLADED LIGHTSABER'
+                  ansImg.setAttribute('src', 'images/whitesingle.png')
+                  ansImg.setAttribute('alt', 'white single-bladed lightsaber')
+                  ansImg.setAttribute('style', 'height: 300px;')
+                  ansParagraph.innerText = ""
                 } else if (answers[0] === 'beauty-contestant' && answers[2] === 'respect') {
-                  alert('purple single-bladed')
+                  ansHeader.innerText = 'PURPLE SINGLE-BLADED LIGHTSABER'
+                  ansImg.setAttribute('src', 'images/purple.jpg')
+                  ansImg.setAttribute('alt', 'purple single-bladed lightsaber')
+                  ansImg.setAttribute('style', 'height: 300px;')
+                  ansParagraph.innerText = ""
                 } else if (answers[0] === 'beauty-contestant' && answers[2] === 'yah') {
-                  alert('white single-bladed')
+                  ansHeader.innerText = 'WHITE SINGLE-BLADED LIGHTSABER'
+                  ansImg.setAttribute('src', 'images/whitesingle.png')
+                  ansImg.setAttribute('alt', 'white single-bladed lightsaber')
+                  ansImg.setAttribute('style', 'height: 300px;')
+                  ansParagraph.innerText = ""
                 } else if (answers[0] === 'beauty-contestant' && answers[2] === ('meh' || '')) {
                   if (answers[3] === ('coruscant' || 'naboo')) {
-                    alert('yellow pike-staff')
+                    ansHeader.innerText = 'YELLOW PIKE-STAFF LIGHTSABER'
+                    ansImg.setAttribute('src', 'images/yellowdouble.png')
+                    ansImg.setAttribute('alt', 'yellow pike-staff lightsaber')
+                    ansImg.setAttribute('style', 'height: 300px;')
+                    ansParagraph.innerText = ""
                   } else {
-                    alert('yellow single-bladed')
+                    ansHeader.innerText = 'YELLOW SINGLE-BLADED LIGHTSABER'
+                    ansImg.setAttribute('src', 'images/yellowsingle.jpg')
+                    ansImg.setAttribute('alt', 'yellow single-bladed lightsaber')
+                    ansImg.setAttribute('style', 'height: 300px;')
                   }
                 } else if (answers[0] === '' && answers[2] === 'yah') {
-                  alert('white single-blade')
+                  ansHeader.innerText = 'WHITE SINGLE-BLADED LIGHTSABER'
+                  ansImg.setAttribute('src', 'images/whitesingle.png')
+                  ansImg.setAttribute('alt', 'white single-bladed lightsaber')
+                  ansImg.setAttribute('style', 'height: 300px;')
+                  ansParagraph.innerText = ""
                 } else if (answers[0] === '' && answers[2] === 'respect') {
                   if (answers[4] === 'R2D2') {
-                    alert('yellow pike staff')
+                    ansHeader.innerText = 'YELLOW PIKE-STAFF LIGHTSABER'
+                    ansImg.setAttribute('src', 'images/yellowdouble.png')
+                    ansImg.setAttribute('alt', 'yellow pike-staff lightsaber')
+                    ansImg.setAttribute('style', 'height: 300px;')
+                    ansParagraph.innerText = ""
                   } else {
-                    alert('yellow single-blade')
+                    ansHeader.innerText = 'YELLOW SINGLE-BLADED LIGHTSABER'
+                    ansImg.setAttribute('src', 'images/yellowsingle.jpg')
+                    ansImg.setAttribute('alt', 'yellow single-bladed lightsaber')
+                    ansImg.setAttribute('style', 'height: 300px;')
                   }
                 } else if (answers[0] === '' && answers[2] === ('' || 'meh')) {
-                  alert('purple single-blade')
+                  ansHeader.innerText = 'PURPLE SINGLE-BLADED LIGHTSABER'
+                  ansImg.setAttribute('src', 'images/purple.jpg')
+                  ansImg.setAttribute('alt', 'purple single-bladed lightsaber')
+                  ansImg.setAttribute('style', 'height: 300px;')
+                  ansParagraph.innerText = ""
+                } else {
+                  alert('default')
+                  ansHeader.innerText = 'BLUE SINGLE-BLADED LIGHTSABER'
+                  ansImg.setAttribute('src', 'images/bluesingle.jpg')
+                  ansImg.setAttribute('alt', 'blue single-bladed lightsaber')
+                  ansImg.setAttribute('style', 'height: 300px;')
+                  ansParagraph.innerText = ""
                 }
 
                 answer.appendChild(ansHeader)
