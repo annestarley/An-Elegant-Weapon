@@ -4,8 +4,18 @@ var q0 = document.querySelector('#q0')
 var backdrop = document.querySelector('.backdrop')
 var answers = ["", "", "", "", ""]
 var boxes = document.querySelectorAll('#box')
-var seconds1 = 0
-var timer1
+
+
+// BUTTONS
+
+
+
+
+// FUNCTIONS
+
+
+
+
 
 // Loading first question
 q0.addEventListener('click', function() {
@@ -83,15 +93,6 @@ q0.addEventListener('click', function() {
   button.innerText = 'Submit'
   question.appendChild(button)
   var q1 = document.querySelector('#q1')
-
-
-
-  // Timer code
-  timer1 = setInterval(function () {
-    seconds1++
-  }, 1000)
-
-  console.log(seconds1)
 
 
 
@@ -441,7 +442,7 @@ q0.addEventListener('click', function() {
           divs5[4].setAttribute('class', 'vacation')
           imgs5[4].setAttribute('src', 'images/coruscant.jpeg')
           imgs5[4].setAttribute('alt', 'coruscant')
-          h4s5[4].innerText = 'Coruscant (also, pre-blow-up)'
+          h4s5[4].innerText = 'Coruscant'
           container5.appendChild(divs5[4])
           divs5[4].appendChild(imgs5[4])
           divs5[4].appendChild(h4s5[4])
@@ -612,7 +613,7 @@ q0.addEventListener('click', function() {
                 ansHeader.innerText = 'BLASTER'
                 ansImg.setAttribute('src', 'images/blaster.png')
                 ansImg.setAttribute('alt', 'blaster')
-                ansParagraph.innerText = "Looks like your not a force wielder... a blaster is the weapon for you!"
+                ansParagraph.innerText = "Looks like your not a force wielder... a blaster is the weapon for you! (...such an uncivilized weapon)"
               } else if (count > 2) {
                 ansHeader.innerText = 'DARKSABER'
                 ansImg.setAttribute('src', 'images/darksaber.jpg')
