@@ -1,6 +1,23 @@
-
-var question = document.querySelector('.question')
-var q0 = document.querySelector('#q0')
+var question0 = document.querySelector('#question0')
+var question1 = document.querySelector('#question1')
+var question2 = document.querySelector('#question2')
+var question3 = document.querySelector('#question3')
+var question4 = document.querySelector('#question4')
+var question5 = document.querySelector('#question5')
+var question6 = document.querySelector('#question6')
+var button0 = document.querySelector('#q0')
+var button1 = document.createElement('button')
+button1.innerText = 'Submit (1)'
+var button2 = document.createElement('button')
+button2.innerText = 'Submit (2)'
+var button3 = document.createElement('button')
+button3.innerText = 'Submit (3)'
+var button4 = document.createElement('button')
+button4.innerText = 'Submit (4)'
+var button5 = document.createElement('button')
+button5.innerText = 'Submit (5)'
+var button6 = document.createElement('button')
+button6.innerText = 'Submit (6)'
 var backdrop = document.querySelector('.backdrop')
 var answers = ["", "", "", "", ""]
 var boxes = document.querySelectorAll('#box')
@@ -18,18 +35,18 @@ var boxes = document.querySelectorAll('#box')
 
 
 // Loading first question
-q0.addEventListener('click', function() {
-  q0.parentNode.removeChild(q0)
+button0.addEventListener('click', function() {
+  question0.parentNode.removeChild(question0)
 
   boxes[0].setAttribute('class', '')
   boxes[1].setAttribute('class', 'current')
 
   var header1 = document.createElement('h3')
   header1.innerText = 'Choose a non-force related vocation:'
-  question.appendChild(header1)
+  question1.appendChild(header1)
   var container = document.createElement('div')
   container.setAttribute('class', 'vocation-container')
-  question.appendChild(container)
+  question1.appendChild(container)
 
   var divs = []
   var imgs = []
@@ -88,11 +105,7 @@ q0.addEventListener('click', function() {
   divs[4].appendChild(imgs[4])
   divs[4].appendChild(h4s[4])
 
-  var button = document.createElement('button')
-  button.setAttribute('id', 'q1')
-  button.innerText = 'Submit'
-  question.appendChild(button)
-  var q1 = document.querySelector('#q1')
+  question1.appendChild(button1)
 
 
 
@@ -114,11 +127,8 @@ q0.addEventListener('click', function() {
 
 
   // Loading second question
-  q1.addEventListener('click', function() {
-    question.parentNode.removeChild(question)
-    var question2 = document.createElement('div')
-    question2.setAttribute('class', 'question')
-    backdrop.appendChild(question2)
+  button1.addEventListener('click', function() {
+    question1.parentNode.removeChild(question1)
 
     boxes[1].setAttribute('class', '')
     boxes[2].setAttribute('class', 'current')
@@ -172,20 +182,12 @@ q0.addEventListener('click', function() {
       }
     })
 
-    var button2 = document.createElement('button')
-    button2.setAttribute('id', 'q2')
-    button2.innerText = 'Submit'
     question2.appendChild(button2)
 
 
-
-    var q2 = document.querySelector('#q2')
     //Loading third question
-    q2.addEventListener('click', function() {
+    button2.addEventListener('click', function() {
       question2.parentNode.removeChild(question2)
-      var question3 = document.createElement('div')
-      question3.setAttribute('class', 'question')
-      backdrop.appendChild(question3)
 
       boxes[2].setAttribute('class', '')
       boxes[3].setAttribute('class', 'current')
@@ -281,9 +283,6 @@ q0.addEventListener('click', function() {
       divs2[9].appendChild(h4s2[9])
       div3.appendChild(divs2[9])
 
-      var button3 = document.createElement('button')
-      button3.innerText = 'Submit'
-      button3.setAttribute('id', 'q3')
       question3.appendChild(button3)
 
 
@@ -302,14 +301,9 @@ q0.addEventListener('click', function() {
 
 
 
-
-      var q3 = document.querySelector('#q3')
       //Loading fourth question
-      q3.addEventListener('click', function() {
+      button3.addEventListener('click', function() {
         question3.parentNode.removeChild(question3)
-        var question4 = document.createElement('div')
-        question4.setAttribute('class', 'question')
-        backdrop.appendChild(question4)
 
         boxes[3].setAttribute('class', '')
         boxes[4].setAttribute('class', 'current')
@@ -363,21 +357,12 @@ q0.addEventListener('click', function() {
           }
         })
 
-        var button4 = document.createElement('button')
-        button4.setAttribute('id', 'q4')
-        button4.innerText = 'Submit'
         question4.appendChild(button4)
 
 
-
-
-        var q4 = document.querySelector('#q4')
         //Loading fifth question
-        q4.addEventListener('click', function() {
+        button4.addEventListener('click', function() {
           question4.parentNode.removeChild(question4)
-          var question5 = document.createElement('div')
-          question5.setAttribute('class', 'question')
-          backdrop.appendChild(question5)
 
           boxes[4].setAttribute('class', '')
           boxes[5].setAttribute('class', 'current')
@@ -447,9 +432,6 @@ q0.addEventListener('click', function() {
           divs5[4].appendChild(imgs5[4])
           divs5[4].appendChild(h4s5[4])
 
-          var button5 = document.createElement('button')
-          button5.setAttribute('id', 'q5')
-          button5.innerText = 'Submit'
           question5.appendChild(button5)
 
 
@@ -472,13 +454,9 @@ q0.addEventListener('click', function() {
 
 
 
-          var q5 = document.querySelector('#q5')
           //Loading sixth question
-          q5.addEventListener('click', function() {
+          button5.addEventListener('click', function() {
             question5.parentNode.removeChild(question5)
-            var question6 = document.createElement('div')
-            question6.setAttribute('class', 'question')
-            backdrop.appendChild(question6)
 
             boxes[5].setAttribute('class', '')
             boxes[6].setAttribute('class', 'current')
@@ -527,9 +505,6 @@ q0.addEventListener('click', function() {
             droid[2].appendChild(bb8name)
             droidcontainer.appendChild(droid[2])
 
-            var button6 = document.createElement('button')
-            button6.setAttribute('id', 'q6')
-            button6.innerText = "Let's see your results!"
             question6.appendChild(button6)
 
 
@@ -552,9 +527,8 @@ q0.addEventListener('click', function() {
 
 
 
-            var q6 = document.querySelector('#q6')
             // Laoding answer page
-            q6.addEventListener('click', function() {
+            button6.addEventListener('click', function() {
               question6.parentNode.removeChild(question6)
               var answer = document.createElement('div')
               answer.setAttribute('class', 'question')
