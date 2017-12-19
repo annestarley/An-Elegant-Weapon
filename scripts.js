@@ -7,28 +7,21 @@ var question5 = document.querySelector('#question5')
 var question6 = document.querySelector('#question6')
 var button0 = document.querySelector('#q0')
 var button1 = document.createElement('button')
-button1.innerText = 'Submit (1)'
+button1.innerText = 'Submit'
 var button2 = document.createElement('button')
-button2.innerText = 'Submit (2)'
+button2.innerText = 'Submit'
 var button3 = document.createElement('button')
-button3.innerText = 'Submit (3)'
+button3.innerText = 'Submit'
 var button4 = document.createElement('button')
-button4.innerText = 'Submit (4)'
+button4.innerText = 'Submit'
 var button5 = document.createElement('button')
-button5.innerText = 'Submit (5)'
+button5.innerText = 'Submit'
 var button6 = document.createElement('button')
-button6.innerText = 'Submit (6)'
+button6.innerText = 'Find your lightsaber!'
 var backdrop = document.querySelector('.backdrop')
 var answers = ["", "", "", "", ""]
 var boxes = document.querySelectorAll('#box')
-
-
-// BUTTONS
-
-
-
-
-// FUNCTIONS
+var timeoutID
 
 
 
@@ -107,7 +100,21 @@ button0.addEventListener('click', function() {
 
   question1.appendChild(button1)
 
-  // The code that allows for a target picture to be selected
+// TIMER
+  timeoutID = window.setTimeout(function() {
+    if (question1) {
+      container.parentNode.removeChild(container)
+      header1.parentNode.removeChild(header1)
+      console.log(question1)
+      var timesUp1 = document.createElement('h3')
+      timesUp1.innerText = "Time's up for question 1! Click to continue to the next question."
+      question1.appendChild(timesUp1)
+      button1.innerText = 'Continue'
+      question1.appendChild(button1)
+    }
+  }, 5000)
+
+  // The code that allows for a target picture to be selected and selected to be pushed into answers array
   var jobs = document.querySelectorAll('#job')
   for (var i = 0; i < jobs.length; i++) {
     jobs[i].addEventListener('click', function(e) {
@@ -128,12 +135,6 @@ button0.addEventListener('click', function() {
     })
   }
 })
-
-
-
-
-
-
 
 
   // Loading second question
@@ -193,14 +194,21 @@ button1.addEventListener('click', function() {
   })
 
   question2.appendChild(button2)
+
+  // TIMER
+  timeoutID = window.setTimeout(function() {
+    if (question1) {
+      container.parentNode.removeChild(container)
+      header1.parentNode.removeChild(header1)
+      console.log(question1)
+      var timesUp1 = document.createElement('h3')
+      timesUp1.innerText = "Time's up for question 1! Click to continue to the next question."
+      question1.appendChild(timesUp1)
+      button1.innerText = 'Continue'
+      question1.appendChild(button1)
+    }
+  }, 5000)
 })
-
-
-
-
-
-
-
 
 
     //Loading third question
@@ -319,12 +327,6 @@ button2.addEventListener('click', function() {
 })
 
 
-
-
-
-
-
-
       //Loading fourth question
 button3.addEventListener('click', function() {
   question3.parentNode.removeChild(question3)
@@ -368,8 +370,6 @@ button3.addEventListener('click', function() {
   lis4[2].appendChild(labels4[2])
   ul4.appendChild(lis4[2])
 
-
-
   // Adding answers array algorithm for q2
   ul4.addEventListener('click', function(e) {
     if (document.getElementById('ya').checked) {
@@ -383,9 +383,6 @@ button3.addEventListener('click', function() {
 
   question4.appendChild(button4)
 })
-
-
-
 
 
   //Loading fifth question
@@ -462,8 +459,6 @@ button4.addEventListener('click', function() {
 
   question5.appendChild(button5)
 
-
-
   // Adding the code that allows for selection of a vacation spot
   var vacationSpots = document.querySelectorAll('#vacation-spot')
   for (var i = 0; i < vacationSpots.length; i++) {
@@ -485,7 +480,6 @@ button4.addEventListener('click', function() {
     })
   }
 })
-
 
 
   //Loading sixth question
@@ -541,8 +535,6 @@ button5.addEventListener('click', function() {
 
   question6.appendChild(button6)
 
-
-
   // Code that allows user to select a droid
   var droids = document.querySelectorAll('#droid-type')
   for (var i = 0; i < droids.length; i++) {
@@ -566,7 +558,6 @@ button5.addEventListener('click', function() {
 })
 
 
-
             // Laoding answer page
 button6.addEventListener('click', function() {
   question6.parentNode.removeChild(question6)
@@ -582,8 +573,6 @@ button6.addEventListener('click', function() {
   answer.appendChild(header7)
 
   console.log(answers)
-
-
 
   //algorithm for figuring out which lightsaber
   var lightsaber;
@@ -747,8 +736,7 @@ button6.addEventListener('click', function() {
   answer.appendChild(ansImg)
   answer.appendChild(ansParagraph)
 
-
-
+// Play again button created
   var playAgain = document.createElement('button')
   playAgain.innerText = 'Click to play again!'
   answer.appendChild(playAgain)
