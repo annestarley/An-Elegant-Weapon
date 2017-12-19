@@ -197,15 +197,14 @@ button1.addEventListener('click', function() {
 
   // TIMER
   timeoutID = window.setTimeout(function() {
-    if (question1) {
-      container.parentNode.removeChild(container)
-      header1.parentNode.removeChild(header1)
-      console.log(question1)
-      var timesUp1 = document.createElement('h3')
-      timesUp1.innerText = "Time's up for question 1! Click to continue to the next question."
-      question1.appendChild(timesUp1)
-      button1.innerText = 'Continue'
-      question1.appendChild(button1)
+    if (question2) {
+      jarjar.parentNode.removeChild(jarjar)
+      ul.parentNode.removeChild(ul)
+      var timesUp2 = document.createElement('h3')
+      timesUp2.innerText = "Time's up for question 2! Click to continue to the next question."
+      question2.appendChild(timesUp2)
+      button2.innerText = 'Continue'
+      question2.appendChild(button2)
     }
   }, 5000)
 })
@@ -324,6 +323,19 @@ button2.addEventListener('click', function() {
       }
     })
   }
+
+  // TIMER
+    timeoutID = window.setTimeout(function() {
+      if (question3) {
+        header3.parentNode.removeChild(header3)
+        div3.parentNode.removeChild(div3)
+        var timesUp3 = document.createElement('h3')
+        timesUp3.innerText = "Time's up for question 3! Click to continue to the next question."
+        question3.appendChild(timesUp3)
+        button3.innerText = 'Continue'
+        question3.appendChild(button3)
+      }
+    }, 5000)
 })
 
 
@@ -382,6 +394,19 @@ button3.addEventListener('click', function() {
   })
 
   question4.appendChild(button4)
+
+  // TIMER
+  timeoutID = window.setTimeout(function() {
+    if (question4) {
+      header4.parentNode.removeChild(header4)
+      ul4.parentNode.removeChild(ul4)
+      var timesUp4 = document.createElement('h3')
+      timesUp4.innerText = "Time's up for question 4! Click to continue to the next question."
+      question4.appendChild(timesUp4)
+      button4.innerText = 'Continue'
+      question4.appendChild(button4)
+    }
+  }, 5000)
 })
 
 
@@ -392,9 +417,9 @@ button4.addEventListener('click', function() {
   boxes[4].setAttribute('class', '')
   boxes[5].setAttribute('class', 'current')
 
-  var header4 = document.createElement('h4')
-  header4.innerText = 'Choose a galactic vacation spot:'
-  question5.appendChild(header4)
+  var header5 = document.createElement('h4')
+  header5.innerText = 'Choose a galactic vacation spot:'
+  question5.appendChild(header5)
 
   var container5 = document.createElement('div')
   container5.setAttribute('class', 'vacation-container')
@@ -479,6 +504,19 @@ button4.addEventListener('click', function() {
       }
     })
   }
+
+  // TIMER
+  timeoutID = window.setTimeout(function() {
+    if (question1) {
+      header5.parentNode.removeChild(header5)
+      container5.parentNode.removeChild(container5)
+      var timesUp5 = document.createElement('h3')
+      timesUp5.innerText = "Time's up for question 5! Click to continue to the next question."
+      question5.appendChild(timesUp5)
+      button5.innerText = 'Continue'
+      question5.appendChild(button5)
+    }
+  }, 5000)
 })
 
 
@@ -555,6 +593,19 @@ button5.addEventListener('click', function() {
       }
     })
   }
+
+  // TIMER
+  timeoutID = window.setTimeout(function() {
+    if (question6) {
+      header6.parentNode.removeChild(header6)
+      droidContainer.parentNode.removeChild(droidContainer)
+      var timesUp6 = document.createElement('h3')
+      timesUp6.innerText = "Time's up for question 6! Let's see your answer!!!"
+      question6.appendChild(timesUp6)
+      button6.innerText = 'Continue'
+      question6.appendChild(button6)
+    }
+  }, 5000)
 })
 
 
