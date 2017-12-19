@@ -689,7 +689,6 @@ button5.addEventListener('click', function() {
     })
   }
 
-
 // warning
 warning.innerText = "Warning: Time's about up!"
 timeoutID = window.setTimeout(function() {
@@ -813,7 +812,7 @@ button6.addEventListener('click', function() {
     ansImg.setAttribute('alt', 'purple single-bladed lightsaber')
     ansImg.setAttribute('style', 'height: 300px;')
     ansParagraph.innerText = ""
-  } else if (answers[0] === 'musician' && answers[2] === ('respect' || '')) {
+  } else if (answers[0] === 'musician' && answers[2] === 'respect') {
     if (answers[4] === ('BB8')) {
       ansHeader.innerText = 'YELLOW PIKE-STAFF LIGHTSABER'
       ansImg.setAttribute('src', 'images/yellowdouble.png')
@@ -827,6 +826,12 @@ button6.addEventListener('click', function() {
       ansImg.setAttribute('style', 'height: 300px;')
       ansParagraph.innerText = ""
     }
+  } else if (answers[0] === 'musician' && answers[2] === '') {
+    ansHeader.innerText = 'YELLOW PIKE-STAFF LIGHTSABER'
+    ansImg.setAttribute('src', 'images/yellowdouble.png')
+    ansImg.setAttribute('alt', 'yellow pike-staff lightsaber')
+    ansImg.setAttribute('style', 'height: 300px;')
+    ansParagraph.innerText = ""
   } else if (answers[0] === 'musician' && answers[2] === 'pass') {
     ansHeader.innerText = 'YELLOW SINGLE-BLADED LIGHTSABER'
     ansImg.setAttribute('src', 'images/yellowsingle.jpg')
@@ -901,7 +906,23 @@ button6.addEventListener('click', function() {
   playAgain.innerText = 'Click to play again!'
   answer.appendChild(playAgain)
 
+  // ansImg.addEventListener('mouseover', function(e){
+  //   var sound = document.createElement('audio')
+  //   sound.setAttribute('preload', 'auto')
+  //   sound.setAttribute('controls', 'none')
+  //   sound.style.display = 'none'
+  //   answer.appendChild(sound)
+  //   e.target.play = function() {
+  //     e.target.sound.play()
+  //   }
+  //   alert('play sound')
+  // })
+
   playAgain.addEventListener('click', function() {
+    // var backdrop = document.querySelector('.backdrop')
+    // var body = document.querySelector('body')
+    // backdrop.parentNode.removeChild(backdrop)
+    // body.setAttribute('style', 'background-image: url(images/jump-to-hyperspace.gif)')
     location.reload();
   })
 })
