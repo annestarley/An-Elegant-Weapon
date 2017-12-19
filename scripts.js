@@ -820,9 +820,9 @@ button6.addEventListener('click', function() {
       ansImg.setAttribute('style', 'height: 300px;')
       ansParagraph.innerText = ""
     } else {
-      ansHeader.innerText = 'YELLOW SINGLE-BLADED LIGHTSABER'
-      ansImg.setAttribute('src', 'images/yellowsingle.jpg')
-      ansImg.setAttribute('alt', 'yellow single-bladed lightsaber')
+      ansHeader.innerText = 'WHITE SINGLE-BLADED LIGHTSABER'
+      ansImg.setAttribute('src', 'images/whitesingle.jpg')
+      ansImg.setAttribute('alt', 'white single-bladed lightsaber')
       ansImg.setAttribute('style', 'height: 300px;')
       ansParagraph.innerText = ""
     }
