@@ -918,7 +918,7 @@ button6.addEventListener('click', function() {
 
 // audio added
   var audio = document.createElement('AUDIO')
-  audio.src = 'lightsaber-swing.wav';
+  audio.src = 'saber-swing2.wav';
   console.log(audio)
   var audio2 = document.createElement('AUDIO')
   audio2.src = 'lightsaber-laser.WAV'
