@@ -130,23 +130,28 @@ button0.addEventListener('click', function() {
   question1.appendChild(button1)
 
 
+var warning1 = document.querySelector('#warning1')
 // Warning alert
+var warningImg1 = document.createElement('img')
+warningImg1.setAttribute('src', 'images/warning-golden-rod.png')
+warningImg1.setAttribute('style', 'border: 0;')
 warning.innerText = "Warning: Hurry up goldenrod!"
 timeoutID = window.setTimeout(function() {
   if (question1) {
-    question1.prepend(warning)
+    warning1.prepend(warning)
   }
 }, 6000)
-timeoutID = window.setTimeout(function() {
-  if (question1) {
-    warning.parentNode.removeChild(warning)
-  }
-}, 7500)
+// timeoutID = window.setTimeout(function() {
+//   if (question1) {
+//     warning.parentNode.removeChild(warning)
+//   }
+// }, 9000)
 
 
 // TIMER
   timeoutID = window.setTimeout(function() {
     if (question1) {
+      warning1.parentNode.removeChild(warning1)
       container.parentNode.removeChild(container)
       header1.parentNode.removeChild(header1)
       console.log(question1)
@@ -156,7 +161,7 @@ timeoutID = window.setTimeout(function() {
       button1.innerText = 'Continue'
       question1.appendChild(button1)
     }
-  }, 10000)
+  }, 12000)
 
   // The code that allows for a target picture to be selected and selected to be pushed into answers array
   var jobs = document.querySelectorAll('#job')
@@ -240,20 +245,22 @@ button1.addEventListener('click', function() {
   question2.appendChild(button2)
 
   warning.innerText = "Warning: Quickly now!"
+  var warning2 = document.querySelector('#warning2')
   timeoutID = window.setTimeout(function() {
     if (question2) {
-      question2.prepend(warning)
+      warning2.prepend(warning)
     }
   }, 6000)
-  timeoutID = window.setTimeout(function() {
-    if (question2) {
-      warning.parentNode.removeChild(warning)
-    }
-  }, 7500)
+  // timeoutID = window.setTimeout(function() {
+  //   if (question2) {
+  //     warning2.parentNode.removeChild(warning2)
+  //   }
+  // }, 7500)
 
   // TIMER
   timeoutID = window.setTimeout(function() {
     if (question2) {
+      warning2.parentNode.removeChild(warning2)
       jarjar.parentNode.removeChild(jarjar)
       ul.parentNode.removeChild(ul)
       var timesUp2 = document.createElement('h3')
@@ -381,21 +388,23 @@ button2.addEventListener('click', function() {
   }
 
 // Warning
+var warning3 = document.querySelector('#warning3')
   warning.innerText = "Warning: Time's about up!"
   timeoutID = window.setTimeout(function() {
     if (question3) {
-      question3.prepend(warning)
+      warning3.prepend(warning)
     }
   }, 16000)
-  timeoutID = window.setTimeout(function() {
-    if (question2) {
-      warning.parentNode.removeChild(warning)
-    }
-  }, 17500)
+  // timeoutID = window.setTimeout(function() {
+  //   if (question2) {
+  //     warning3.parentNode.removeChild(warning3)
+  //   }
+  // }, 17500)
 
   // TIMER
     timeoutID = window.setTimeout(function() {
       if (question3) {
+        warning3.parentNode.removeChild(warning3)
         header3.parentNode.removeChild(header3)
         div3.parentNode.removeChild(div3)
         var timesUp3 = document.createElement('h3')
@@ -465,21 +474,23 @@ button3.addEventListener('click', function() {
   question4.appendChild(button4)
 
   // Warning
+  var warning4 = document.querySelector('#warning4')
   warning.innerText = "Warning: Quickly now!"
   timeoutID = window.setTimeout(function() {
     if (question4) {
-      question4.prepend(warning)
+      warning4.prepend(warning)
     }
   }, 6000)
-  timeoutID = window.setTimeout(function() {
-    if (question4) {
-      warning.parentNode.removeChild(warning)
-    }
-  }, 7500)
+  // timeoutID = window.setTimeout(function() {
+  //   if (question4) {
+  //     warning.parentNode.removeChild(warning)
+  //   }
+  // }, 7500)
 
   // TIMER
   timeoutID = window.setTimeout(function() {
     if (question4) {
+      warning4.parentNode.removeChild(warning4)
       header4.parentNode.removeChild(header4)
       ul4.parentNode.removeChild(ul4)
       var timesUp4 = document.createElement('h3')
@@ -588,21 +599,23 @@ button4.addEventListener('click', function() {
   }
 
   //warning
+  var warning5 = document.querySelector('#warning5')
   warning.innerText = "Warning: You're gonna become a permanent resident!"
   timeoutID = window.setTimeout(function() {
     if (question5) {
-      question5.prepend(warning)
+      warning5.prepend(warning)
     }
   }, 6000)
-  timeoutID = window.setTimeout(function() {
-    if (question5) {
-      warning.parentNode.removeChild(warning)
-    }
-  }, 7500)
+  // timeoutID = window.setTimeout(function() {
+  //   if (question5) {
+  //     warning.parentNode.removeChild(warning)
+  //   }
+  // }, 7500)
 
   // TIMER
   timeoutID = window.setTimeout(function() {
     if (question1) {
+      warning5.parentNode.removeChild(warning5)
       header5.parentNode.removeChild(header5)
       container5.parentNode.removeChild(container5)
       var timesUp5 = document.createElement('h3')
@@ -690,21 +703,23 @@ button5.addEventListener('click', function() {
   }
 
 // warning
+var warning6 = document.querySelector('#warning6')
 warning.innerText = "Warning: Time's about up!"
 timeoutID = window.setTimeout(function() {
   if (question6) {
-    question6.prepend(warning)
+    warning6.prepend(warning)
   }
 }, 6000)
-timeoutID = window.setTimeout(function() {
-  if (question6) {
-    warning.parentNode.removeChild(warning)
-  }
-}, 7500)
+// timeoutID = window.setTimeout(function() {
+//   if (question6) {
+//     warning.parentNode.removeChild(warning)
+//   }
+// }, 7500)
 
   // TIMER
   timeoutID = window.setTimeout(function() {
     if (question6) {
+      warning6.parentNode.removeChild(warning6)
       header6.parentNode.removeChild(header6)
       droidContainer.parentNode.removeChild(droidContainer)
       var timesUp6 = document.createElement('h3')
