@@ -22,7 +22,6 @@
 .question {
   margin: auto;
   width: 75%;
-  margin-bottom: 300px
 }
 
 .question-box {
@@ -199,6 +198,6 @@ h4.warning {
   font-size: 1.2em;
 }
 
-#warning1, #warning2, #warning3, #warning4, #warning5, #warning6 {
-  height: 100px;
+#question6 {
+  margin-bottom: 150px;
 }

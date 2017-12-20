@@ -131,10 +131,11 @@ button0.addEventListener('click', function() {
 
 
 var warning1 = document.querySelector('#warning1')
+warning1.setAttribute('style', 'height: 100px;')
 // Warning alert
-var warningImg1 = document.createElement('img')
-warningImg1.setAttribute('src', 'images/warning-golden-rod.png')
-warningImg1.setAttribute('style', 'border: 0;')
+// var warningImg1 = document.createElement('img')
+// warningImg1.setAttribute('src', 'images/warning-golden-rod.png')
+// warningImg1.setAttribute('style', 'border: 0;')
 warning.innerText = "Warning: Hurry up goldenrod!"
 timeoutID = window.setTimeout(function() {
   if (question1) {
@@ -154,7 +155,6 @@ timeoutID = window.setTimeout(function() {
       warning1.parentNode.removeChild(warning1)
       container.parentNode.removeChild(container)
       header1.parentNode.removeChild(header1)
-      console.log(question1)
       var timesUp1 = document.createElement('h3')
       timesUp1.innerText = "Time's up for question 1! Click to continue to the next question."
       question1.appendChild(timesUp1)
@@ -246,6 +246,7 @@ button1.addEventListener('click', function() {
 
   warning.innerText = "Warning: Quickly now!"
   var warning2 = document.querySelector('#warning2')
+  warning2.setAttribute('style', 'height: 100px;')
   timeoutID = window.setTimeout(function() {
     if (question2) {
       warning2.prepend(warning)
@@ -389,6 +390,7 @@ button2.addEventListener('click', function() {
 
 // Warning
 var warning3 = document.querySelector('#warning3')
+warning3.setAttribute('style', 'height: 100px;')
   warning.innerText = "Warning: Time's about up!"
   timeoutID = window.setTimeout(function() {
     if (question3) {
@@ -475,6 +477,7 @@ button3.addEventListener('click', function() {
 
   // Warning
   var warning4 = document.querySelector('#warning4')
+  warning4.setAttribute('style', 'height: 100px;')
   warning.innerText = "Warning: Quickly now!"
   timeoutID = window.setTimeout(function() {
     if (question4) {
@@ -600,6 +603,7 @@ button4.addEventListener('click', function() {
 
   //warning
   var warning5 = document.querySelector('#warning5')
+  warning5.setAttribute('style', 'height: 100px;')
   warning.innerText = "Warning: You're gonna become a permanent resident!"
   timeoutID = window.setTimeout(function() {
     if (question5) {
@@ -704,6 +708,7 @@ button5.addEventListener('click', function() {
 
 // warning
 var warning6 = document.querySelector('#warning6')
+warning6.setAttribute('style', 'height: 100px;')
 warning.innerText = "Warning: Time's about up!"
 timeoutID = window.setTimeout(function() {
   if (question6) {
@@ -721,7 +726,7 @@ timeoutID = window.setTimeout(function() {
     if (question6) {
       warning6.parentNode.removeChild(warning6)
       header6.parentNode.removeChild(header6)
-      droidContainer.parentNode.removeChild(droidContainer)
+      droidcontainer.parentNode.removeChild(droidcontainer)
       var timesUp6 = document.createElement('h3')
       timesUp6.innerText = "Time's up for question 6! Let's see your answer!!!"
       question6.appendChild(timesUp6)
@@ -919,7 +924,6 @@ button6.addEventListener('click', function() {
 // audio added
   var audio = document.createElement('AUDIO')
   audio.src = 'saber-swing2.wav';
-  console.log(audio)
   var audio2 = document.createElement('AUDIO')
   audio2.src = 'lightsaber-laser.WAV'
 
@@ -933,6 +937,7 @@ button6.addEventListener('click', function() {
 // Play again button created
   var playAgain = document.createElement('button')
   playAgain.innerText = 'Click to play again!'
+  playAgain.setAttribute('style', 'margin-bottom: 150px;')
   answer.appendChild(playAgain)
 
   playAgain.addEventListener('click', function() {
