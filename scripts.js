@@ -916,22 +916,18 @@ button6.addEventListener('click', function() {
   answer.appendChild(ansImg)
   answer.appendChild(ansParagraph)
 
+// audio added 
+  var audio = document.createElement('AUDIO')
+  audio.src = 'lightsaber-sound.wav';
+  console.log(audio)
+  ansImg.addEventListener('mouseover', function(e) {
+    audio.play()
+  })
+
 // Play again button created
   var playAgain = document.createElement('button')
   playAgain.innerText = 'Click to play again!'
   answer.appendChild(playAgain)
-
-  // ansImg.addEventListener('mouseover', function(e){
-  //   var sound = document.createElement('audio')
-  //   sound.setAttribute('preload', 'auto')
-  //   sound.setAttribute('controls', 'none')
-  //   sound.style.display = 'none'
-  //   answer.appendChild(sound)
-  //   e.target.play = function() {
-  //     e.target.sound.play()
-  //   }
-  //   alert('play sound')
-  // })
 
   playAgain.addEventListener('click', function() {
     // var backdrop = document.querySelector('.backdrop')
