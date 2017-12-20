@@ -916,12 +916,18 @@ button6.addEventListener('click', function() {
   answer.appendChild(ansImg)
   answer.appendChild(ansParagraph)
 
-// audio added 
+// audio added
   var audio = document.createElement('AUDIO')
-  audio.src = 'lightsaber-sound.wav';
+  audio.src = 'lightsaber-swing.wav';
   console.log(audio)
+  var audio2 = document.createElement('AUDIO')
+  audio2.src = 'lightsaber-laser.WAV'
+
   ansImg.addEventListener('mouseover', function(e) {
     audio.play()
+  })
+  ansImg.addEventListener('click', function(e) {
+    audio2.play()
   })
 
 // Play again button created
