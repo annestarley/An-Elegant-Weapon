@@ -4,6 +4,6 @@ This project uses javaScript, HTML, and CSS. Within the javaScript file, the fol
 * DOM manipulation
 * Event listeners
 * Conditionals
-* Timers . 
+* Timers   
   
 ![Choose a profession]('https://github.com/annestarley/An-Elegant-Weapon/blob/master/images/giphy.gif')
