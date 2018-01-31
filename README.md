@@ -6,4 +6,4 @@ This project uses javaScript, HTML, and CSS. Within the javaScript file, the fol
 * Conditionals
 * Timers   
   
-![Choose a profession]('http://www.giphy.com/gifs/3o7WIqsg63w9ZxbuSs')
+![]('https://github.com/annestarley/An-Elegant-Weapon/blob/master/images/giphy.gif')
