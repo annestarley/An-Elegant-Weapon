@@ -6,4 +6,4 @@ This project uses javaScript, HTML, and CSS. Within the javaScript file, the fol
 * Conditionals
 * Timers   
   
-![Choose a profession]('images/giphy.gif')
+![Choose a profession]('./images/giphy.gif')
