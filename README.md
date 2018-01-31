@@ -5,4 +5,5 @@ This project uses javaScript, HTML, and CSS. Within the javaScript file, the fol
 * Event listeners
 * Conditionals
 * Timers . 
-![Choose a proffesion]('images/giphy.gif')
+  
+![Choose a proffesion]('https://github.com/annestarley/An-Elegant-Weapon/blob/master/images/giphy.gif')
