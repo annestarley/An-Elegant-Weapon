@@ -4,4 +4,5 @@ This project uses javaScript, HTML, and CSS. Within the javaScript file, the fol
 * DOM manipulation
 * Event listeners
 * Conditionals
-* Timers
+* Timers . 
+![Choose a proffesion]('images/giphy.gif')
