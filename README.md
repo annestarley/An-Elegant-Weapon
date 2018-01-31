@@ -7,4 +7,4 @@ This project uses javaScript, HTML, and CSS. Within the javaScript file, the fol
 * Timers   
   
 ![Choose your galactic profession](https://github.com/annestarley/An-Elegant-Weapon/blob/master/images/giphy.gif =100x)
-<img src="https://github.com/annestarley/An-Elegant-Weapon/blob/master/images/giphy.gif" alt="Choose your profession" style="width: 100px;"/>
+<img src="https://github.com/annestarley/An-Elegant-Weapon/blob/master/images/giphy.gif" alt="Choose your profession" style="width: 50px;"/>
