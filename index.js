@@ -923,9 +923,9 @@ button6.addEventListener('click', function() {
 
 // audio added
   var audio = document.createElement('AUDIO')
-  audio.src = 'saber-swing2.wav';
+  audio.src = 'audio/saber-swing2.wav';
   var audio2 = document.createElement('AUDIO')
-  audio2.src = 'lightsaber-laser.WAV'
+  audio2.src = 'audio/lightsaber-laser.WAV'
 
   ansImg.addEventListener('mouseover', function(e) {
     audio.play()
