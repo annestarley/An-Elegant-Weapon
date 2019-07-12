@@ -1,9 +1,6 @@
 * {
   box-sizing: border-box;
 }
-/* body {
-  background-image: url(stars-twinkling.gif);
-} */
 
 .head {
   margin-top: 10%;
@@ -200,4 +197,45 @@ h4.warning {
 
 #question6 {
   margin-bottom: 150px;
+}
+
+ul {
+  padding-inline-start: 0px!important;
+}
+
+@media only screen and (max-width: 635px) {
+  .question-box li {
+    font-size: .8em;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .question-box li {
+    font-size: .6em;
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  .question-box li {
+    padding: 10px;
+    margin: 3px;
+  }
+
+  li.current {
+    padding: 15px;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  .question-box li {
+    margin: 1px
+  }
+
+  li.current {
+    padding: 13px;
+  }
+  
+  #warning1, #warning2, #warning3, #warning4, #warning5, #warning6, #warning7, #warning8, .warning {
+    width: 100%;
+  }
 }
